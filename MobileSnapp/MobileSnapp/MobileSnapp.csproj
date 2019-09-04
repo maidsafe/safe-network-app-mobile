@@ -13,4 +13,6 @@
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
   </ItemGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\CodeStyles.targets" />
 </Project>
