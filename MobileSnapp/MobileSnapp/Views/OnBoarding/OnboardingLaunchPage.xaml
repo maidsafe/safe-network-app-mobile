@@ -18,18 +18,29 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center"
-                     VerticalOptions="Center">
-            <Label Text="Hello"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-            <Label Text="{x:Static icons:IconFont.Refresh}"
-                   FontSize="20"
-                   FontFamily="{StaticResource Material}" />
-            <Image Source="safenetworklogo" />
-            <Label Text="SAFE NETWORK" />
-            <Button Text="Login"
-                    Clicked="OpenLoginPage"/>
+        <StackLayout Spacing="0">
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryColor}">
+                    <CarouselView ItemsSource="{Binding Boardings}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Frame HasShadow="True" BorderColor="DarkGray" CornerRadius="5" Margin="20" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                        <StackLayout>
+                                            <Label Text="{Binding ImagePath}" TextColor="Black" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
+                                            <Label Text="{Binding Header}" TextColor="Black" />
+                                            <Label Text="{Binding Content}" TextColor="Black" FontAttributes="Italic" HorizontalOptions="Center" MaxLines="5" LineBreakMode="TailTruncation" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <StackLayout Margin="10" Orientation="Horizontal">
+                        <Button Text="Back" Command="{Binding BackCommand}" />
+                        <Button Text="Forward" Command="{Binding NextCommand}" />
+                    </StackLayout>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
