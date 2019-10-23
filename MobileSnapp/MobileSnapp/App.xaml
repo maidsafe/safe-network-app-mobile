@@ -12,6 +12,7 @@
         </OnPlatform>
         <Color x:Key="PrimaryColor">#303F9F</Color>
         <Color x:Key="SecondaryColor">#FF5722</Color>
+<<<<<<< HEAD
         <Color x:Key="PrimaryDarkTextColor">#000000</Color>
         <Color x:Key="PrimaryLightTextColor">#FFFFFF</Color>
 
@@ -38,5 +39,7 @@
              <Setter Property="Opacity"
                      Value="0.7"/>
         </Style>
+=======
+>>>>>>> feat(homePage): add carousel view and bind to view model
     </Application.Resources>
 </Application>
