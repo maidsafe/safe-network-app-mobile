@@ -8,5 +8,10 @@ namespace MobileSnapp.Views.Onboarding
         {
             InitializeComponent();
         }
+
+        private void OpenLoginPage(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new Onboading.LoginPage());
+        }
     }
 }

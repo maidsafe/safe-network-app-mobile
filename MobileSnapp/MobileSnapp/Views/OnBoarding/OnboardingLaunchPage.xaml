@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:icons="clr-namespace:MobileSnapp.Models"
-             x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage">
+             x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage"
+             Title="SAFE NETWORK"
+             IconImageSource="safenetworklogo">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -19,13 +21,15 @@
         <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center">
             <Label Text="Hello"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
             <Label Text="{x:Static icons:IconFont.Refresh}"
                    FontSize="20"
-                   FontFamily="{StaticResource Material}"/>
-            <Image Source="safenetworklogo"/>
-            <Label Text="SAFE NETWORK"/>
+                   FontFamily="{StaticResource Material}" />
+            <Image Source="safenetworklogo" />
+            <Label Text="SAFE NETWORK" />
+            <Button Text="Login"
+                    Clicked="OpenLoginPage"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
