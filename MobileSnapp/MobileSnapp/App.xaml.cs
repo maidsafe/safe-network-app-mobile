@@ -1,5 +1,5 @@
-﻿using Xamarin.Forms;
-using MobileSnapp.Views.OnBoarding;
+﻿using MobileSnapp.Views.Onboarding;
+using Xamarin.Forms;
 
 namespace MobileSnapp
 {
@@ -9,7 +9,7 @@ namespace MobileSnapp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new OnBoardingPage());
+            MainPage = new NavigationPage(new OnboardingLaunchPage());
         }
 
         protected override void OnStart()
