@@ -10,5 +10,7 @@
             <On Platform="iOS" Value="Material Design Icons" />
             <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
         </OnPlatform>
+        <Color x:Key="PrimaryColor">#303F9F</Color>
+        <Color x:Key="SecondaryColor">#FF5722</Color>
     </Application.Resources>
 </Application>

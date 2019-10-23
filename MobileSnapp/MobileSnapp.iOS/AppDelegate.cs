@@ -7,8 +7,10 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-﻿using Foundation;
-﻿using UIKit;
+using Foundation;
+using UIKit;
+using UIKit;
+using Xamarin.Forms;
 
 ﻿namespace MobileSnapp.iOS
 {
@@ -25,6 +27,7 @@
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Forms.SetFlags("CarouselView_Experimental");
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App());
