@@ -15,21 +15,17 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <NavigationPage.TitleView>
-        <StackLayout HorizontalOptions="FillAndExpand"
-                     Orientation="Horizontal"
-                     BackgroundColor="AliceBlue"
-                     VerticalOptions="Start">
-            <Label Text="{x:Static icons:IconFont.ArrowLeft}"/>
-            <Label Text="SAFE NETWORK"/>
-        </StackLayout>
-    </NavigationPage.TitleView>
-
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Center">
             <Label Text="Hello"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Label Text="{x:Static icons:IconFont.Refresh}"
+                   FontSize="20"
+                   FontFamily="{StaticResource Material}"/>
+            <Image Source="safenetworklogo"/>
+            <Label Text="SAFE NETWORK"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
