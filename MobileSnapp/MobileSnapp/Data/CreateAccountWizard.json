@@ -1,0 +1,19 @@
+{
+  "formWizard": [
+    {
+      "stepText": "Step 1 of 3",
+      "title": "Enter Invite",
+      "content": "Paste the link, or scan a QR code to get started."
+    },
+    {
+      "stepText": "Step 2 of 3",
+      "title": "Choose a Password",
+      "content": "Make sure you keep it safe beacuse it can’t be reset or recovered."
+    },
+    {
+      "stepText": "Step 3 of 3",
+      "title": "Choose a Passphrase",
+      "content": "It’s like a second password that you’ll use to log in. Make it unique and memorable, and keep it safe."
+    }
+  ]
+}

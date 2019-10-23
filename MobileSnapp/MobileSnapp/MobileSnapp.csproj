@@ -10,6 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\CreateAccountOnboarding.json" />
+    <None Remove="Data\CreateAccountWizard.json" />
+    <None Remove="Data\OnboardingLaunch.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\CreateAccountOnboarding.json" />
+    <EmbeddedResource Include="Data\CreateAccountWizard.json" />
+    <EmbeddedResource Include="Data\OnboardingLaunch.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.5.0-beta" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />

@@ -1,0 +1,39 @@
+{
+  "createAccountOnboarding": [
+    {
+      "title": "Your secure, private digital life.",
+      "content": "Use apps, communicate with others, and store data in complete privacy with a SAFE Account.",
+      "image": ""
+    },
+    {
+      "title": "Pay as you go with Safecoin. Not with you privacy.",
+      "content": "You don’t pay for services by sacrificing privacy. You pay only for what you use, in a currency called Safecoin.",
+      "image": ""
+    },
+    {
+      "title": "Earn Safecoin with a Vault.",
+      "content": "You can pay for your account by running a Vault on your home computer. Contribute computer power to the network and be rewarded for it.",
+      "image": ""
+    }
+  ],
+  "createAccountOptionList": [
+    {
+      "title": "Get an Invite",
+      "content": "Receive an invite, and you’ll have all you need to get going.",
+      "image": "",
+      "isDesktopOnly": false
+    },
+    {
+      "title": "Request an Invite",
+      "content": "Ask the community for an invite to get started fast",
+      "image": "",
+      "isDesktopOnly": false
+    },
+    {
+      "title": "Earn one Yourself",
+      "content": "Use your computer to earn Safecoins and create an account",
+      "image": "",
+      "isDesktopOnly": true
+    }
+  ]
+}
