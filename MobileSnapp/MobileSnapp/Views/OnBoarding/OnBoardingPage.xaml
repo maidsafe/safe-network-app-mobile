@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:icons="clr-namespace:MobileSnapp.Models"
              x:Class="MobileSnapp.Views.OnBoarding.OnBoardingPage">
 
     <ContentPage.Resources>
@@ -13,10 +14,20 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
+    <NavigationPage.TitleView>
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     Orientation="Horizontal"
+                     BackgroundColor="AliceBlue"
+                     VerticalOptions="Start">
+            <Label Text="{x:Static icons:IconFont.ArrowLeft}"/>
+            <Label Text="SAFE NETWORK"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Example page"
+            <Label Text="Hello"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

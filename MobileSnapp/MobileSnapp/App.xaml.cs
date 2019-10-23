@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using MobileSnapp.Views.OnBoarding;
 
 namespace MobileSnapp
 {
@@ -8,7 +9,7 @@ namespace MobileSnapp
         {
             InitializeComponent();
 
-            MainPage = new Views.LoginPage();
+            MainPage = new NavigationPage(new OnBoardingPage());
         }
 
         protected override void OnStart()
