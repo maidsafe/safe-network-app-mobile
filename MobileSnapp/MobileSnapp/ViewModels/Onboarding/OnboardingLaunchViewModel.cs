@@ -1,15 +1,15 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using MobileSnapp.Models.OnBoarding;
+using MobileSnapp.Models.Onboarding;
 using MvvmHelpers;
 using Xamarin.Forms;
 
-namespace MobileSnapp.ViewModels.OnBoarding
+namespace MobileSnapp.ViewModels.Onboarding
 {
     /// <summary>
     /// ViewModel for on-boarding gradient page.
     /// </summary>
-    public class OnBoardingViewModel : BaseViewModel
+    public class OnBoardingLaunchViewModel : BaseViewModel
     {
         #region Fields
 
@@ -23,7 +23,7 @@ namespace MobileSnapp.ViewModels.OnBoarding
 
         #region Constructor
 
-        public OnBoardingViewModel()
+        public OnBoardingLaunchViewModel()
         {
             Boardings = new ObservableCollection<Boarding>
             {

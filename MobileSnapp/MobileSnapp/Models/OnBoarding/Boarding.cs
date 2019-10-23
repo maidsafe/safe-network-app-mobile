@@ -1,4 +1,4 @@
-﻿namespace MobileSnapp.Models.OnBoarding
+﻿namespace MobileSnapp.Models.Onboarding
 {
     /// <summary>
     /// Model for OnBoarding
