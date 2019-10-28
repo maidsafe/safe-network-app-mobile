@@ -1,23 +1,40 @@
-﻿namespace MobileSnapp.Models.Onboarding
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace MobileSnapp.Models.Onboarding
 {
-    /// <summary>
-    /// Model for OnBoarding
-    /// </summary>
-    public class Boarding
+    [DataContract]
+    public class OnboardingLaunch
     {
-        /// <summary>
-        /// Gets or sets the image.
-        /// </summary>
-        public string ImagePath { get; set; }
+        [DataMember(Name = "carouselHeader")]
+        public string CarouselHeader { get; set; }
 
-        /// <summary>
-        /// Gets or sets the header.
-        /// </summary>
-        public string Header { get; set; }
+        [DataMember(Name = "carouselItems")]
+        public List<CarouselItem> CarouselItems { get; set; }
 
-        /// <summary>
-        /// Gets or sets the content.
-        /// </summary>
+        [DataMember(Name = "bottomLayoutSecondaryTitle")]
+        public string BottomLayoutSecondaryTitle { get; set; }
+
+        [DataMember(Name = "bottomLayoutPrimaryTitle")]
+        public string BottomLayoutPrimaryTitle { get; set; }
+    }
+
+    [DataContract]
+    public class CarouselItem
+    {
+        [DataMember(Name = "content")]
         public string Content { get; set; }
+
+        [DataMember(Name = "isVisible")]
+        public bool IsVisible { get; set; }
+
+        [DataMember(Name = "primaryTitle")]
+        public string PrimaryTitle { get; set; }
+
+        [DataMember(Name = "secondaryTitle")]
+        public string SecondaryTitle { get; set; }
+
+        [DataMember(Name = "color")]
+        public string Color { get; set; }
     }
 }

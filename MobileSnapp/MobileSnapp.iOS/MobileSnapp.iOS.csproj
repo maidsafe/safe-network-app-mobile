@@ -137,6 +137,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
     <BundleResource Include="Resources\safenetworklogo.png" />
+    <BundleResource Include="Resources\lock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildThisFileDirectory)..\CodeStyles.targets" />
 </Project>
