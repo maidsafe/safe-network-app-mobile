@@ -3,11 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              xmlns:icons="clr-namespace:MobileSnapp.Models"
-             x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.PrefersHomeIndicatorAutoHidden="true"
+             mc:Ignorable="d"
              Title="SAFE NETWORK"
-             IconImageSource="safenetworklogo">
+             IconImageSource="safenetworklogo"
+             Visual="Material"
+             x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -18,29 +21,46 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout Spacing="0">
-            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryColor}">
-                    <CarouselView ItemsSource="{Binding Boardings}">
+        <StackLayout Spacing="0" BackgroundColor="{StaticResource PrimaryColor}">
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="10, 0">
+                <Label Text="Getting Started" TextColor="Wheat" HorizontalOptions="Start" VerticalOptions="End" Margin="20,0,0,0" />
+                <CarouselView ItemsSource="{Binding Boardings}" HeightRequest="400" PeekAreaInsets= "50" HorizontalOptions="Center" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
                         <CarouselView.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout>
-                                    <Frame HasShadow="True" BorderColor="DarkGray" CornerRadius="5" Margin="20" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                                        <StackLayout>
-                                            <Label Text="{Binding ImagePath}" TextColor="Black" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
-                                            <Label Text="{Binding Header}" TextColor="Black" />
-                                            <Label Text="{Binding Content}" TextColor="Black" FontAttributes="Italic" HorizontalOptions="Center" MaxLines="5" LineBreakMode="TailTruncation" />
+                                    <Frame CornerRadius="8" Margin="0,10" HeightRequest="350" WidthRequest="250" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="0">
+                                        <StackLayout Orientation="Vertical">
+                                            <Frame HeightRequest="200" VerticalOptions="FillAndExpand" BackgroundColor="{Binding Color}"/>
+                                            <StackLayout HeightRequest="150" Orientation="Vertical" Padding="10,20">
+                                                <Label Text="{Binding SecondaryTitle}" TextColor="Black" FontAttributes="Italic" HorizontalOptions="Start" MaxLines="5" LineBreakMode="TailTruncation" />
+                                                <Label Text="{Binding PrimaryTitle}" TextColor="Black" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
+                                                <Label Text="{Binding Content}" TextColor="Black" />
+                                             </StackLayout>
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>
-                    <StackLayout Margin="10" Orientation="Horizontal">
-                        <Button Text="Back" Command="{Binding BackCommand}" />
-                        <Button Text="Forward" Command="{Binding NextCommand}" />
-                    </StackLayout>
-
             </StackLayout>
+            <Frame HeightRequest="100" VerticalOptions="End" BackgroundColor="White">
+                <StackLayout Orientation="Vertical" >
+                    <Label Text="YOUR SAFE ACCOUNT" CharacterSpacing="1.5" TextColor="SlateGray" />
+                    <Label Text="Securely access your SAFE Network Account" CharacterSpacing="0.25" />
+                    <Button VerticalOptions="End"
+                            HorizontalOptions="End"
+                            HeightRequest="50"
+                            WidthRequest="120"
+                            CornerRadius="25"
+                            ImageSource="lock"
+                            ContentLayout="Left,2"
+                            Text="LOG IN"
+                            BackgroundColor= "{StaticResource SecondaryColor}"
+                            Padding="0"
+                            TextColor="White">
+                        </Button>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -36,5 +36,10 @@ using Xamarin.Forms;
                 BindingContext = _viewModel;
             }
         }
+
+        private void OpenLoginPage(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new Onboading.LoginPage());
+        }
     }
 }

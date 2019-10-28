@@ -9,6 +9,7 @@
 
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using MobileSnapp.Helpers;
 using MobileSnapp.Models.Onboarding;
 using MvvmHelpers;
 using Xamarin.Forms;
@@ -22,11 +23,15 @@ namespace MobileSnapp.ViewModels.Onboarding
     {
         #region Fields
 
-        private ObservableCollection<Boarding> boardings;
+        private const string _staticContentFile = "OnboardingLaunch.json";
+
+        private ObservableCollection<CarouselItem> boardings;
 
         private string nextButtonText = "NEXT";
 
         private int selectedIndex;
+
+        private ObservableCollection<CreateAccountOnboardingItem> _onBordingOptions;
 
         #endregion
 
@@ -34,27 +39,10 @@ namespace MobileSnapp.ViewModels.Onboarding
 
         public OnBoardingLaunchViewModel()
         {
-            Boardings = new ObservableCollection<Boarding>
-            {
-                new Boarding
-                {
-                    ImagePath = "icon",
-                    Header = "Screen 1",
-                    Content = "Details 1"
-                },
-                new Boarding
-                {
-                    ImagePath = "icon",
-                    Header = "Screen 2",
-                    Content = "Details 2"
-                },
-                new Boarding
-                {
-                    ImagePath = "icon",
-                    Header = "Screen 3",
-                    Content = "Details 3"
-                }
-            };
+            Boardings = new ObservableCollection<CarouselItem>(
+               ContentHelpers.PopulateData<OnboardingLaunch>(
+                   _staticContentFile)
+               .CarouselItems);
 
             BackCommand = new Command(Back);
             NextCommand = new Command(Next);
@@ -81,10 +69,16 @@ namespace MobileSnapp.ViewModels.Onboarding
         /// <summary>
         /// Gets or sets the boardings collection.
         /// </summary>
-        public ObservableCollection<Boarding> Boardings
+        public ObservableCollection<CarouselItem> Boardings
         {
             get => boardings;
             set => SetProperty(ref boardings, value);
+        }
+
+        public ObservableCollection<CreateAccountOnboardingItem> OnBordingOptions
+        {
+            get { return _onBordingOptions; }
+            set { _onBordingOptions = value; }
         }
 
         public string NextButtonText
