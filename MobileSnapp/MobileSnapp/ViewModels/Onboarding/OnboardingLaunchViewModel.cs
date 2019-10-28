@@ -25,6 +25,8 @@ namespace MobileSnapp.ViewModels.Onboarding
 
         private ObservableCollection<CarouselItem> boardings;
 
+        private ObservableCollection<CreateAccountOnboardingItem> _onBordingOptions;
+
         #endregion
 
         #region Constructor
