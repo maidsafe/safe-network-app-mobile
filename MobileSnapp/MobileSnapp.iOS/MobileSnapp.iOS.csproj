@@ -134,6 +134,10 @@
     <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
     <BundleResource Include="Resources\safenetworklogo.png" />
     <BundleResource Include="Resources\lock.png" />
+    <BundleResource Include="Resources\vault.png" />
+    <BundleResource Include="Resources\someone.png" />
+    <BundleResource Include="Resources\browser.png" />
+    <BundleResource Include="Resources\safe.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

@@ -6,9 +6,8 @@
              xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
+             ios:Page.UseSafeArea="True"
              mc:Ignorable="d"
-             Title="SAFE NETWORK"
-             IconImageSource="safenetworklogo"
              Visual="Material"
              x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage">
 
@@ -19,48 +18,146 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     HeightRequest="20"
+                     Padding="5,0">
+        <Image Source="safe"
+               HorizontalOptions="Start"
+               HeightRequest="20"
+               WidthRequest="20" />
+        <Label Text="SAFE NETWORK"
+               HorizontalOptions="StartAndExpand"
+               TextColor="White"
+               FontSize="Medium" />
+        <Label FontFamily="{StaticResource Material}"
+               Text="{x:Static icons:IconFont.DotsVertical}"
+               TextColor="GhostWhite"
+               FontSize="Medium"
+               HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Spacing="0" BackgroundColor="{StaticResource PrimaryColor}">
-            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="10, 0">
-                <Label Text="Getting Started" TextColor="Wheat" HorizontalOptions="Start" VerticalOptions="End" Margin="20,0,0,0" />
-                <CarouselView ItemsSource="{Binding Boardings}" HeightRequest="400" PeekAreaInsets= "50" HorizontalOptions="Center" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
-                        <CarouselView.ItemTemplate>
-                            <DataTemplate>
-                                <StackLayout>
-                                    <Frame CornerRadius="8" Margin="0,10" HeightRequest="350" WidthRequest="250" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="0">
-                                        <StackLayout Orientation="Vertical">
-                                            <Frame HeightRequest="200" VerticalOptions="FillAndExpand" BackgroundColor="{Binding Color}"/>
-                                            <StackLayout HeightRequest="150" Orientation="Vertical" Padding="10,20">
-                                                <Label Text="{Binding SecondaryTitle}" TextColor="Black" FontAttributes="Italic" HorizontalOptions="Start" MaxLines="5" LineBreakMode="TailTruncation" />
-                                                <Label Text="{Binding PrimaryTitle}" TextColor="Black" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
-                                                <Label Text="{Binding Content}" TextColor="Black" />
-                                             </StackLayout>
-                                        </StackLayout>
+            <StackLayout Orientation="Vertical"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="CenterAndExpand"
+                         Padding="10, 0">
+                <Label Text="Getting Started"
+                       TextColor="Wheat"
+                       HorizontalOptions="Start"
+                       VerticalOptions="End"
+                       Margin="20,0,0,0" />
+                <CarouselView ItemsSource="{Binding Boardings}"
+                              HorizontalOptions="Center"
+                              VerticalScrollBarVisibility="Never"
+                              HorizontalScrollBarVisibility="Never">
+                    <CarouselView.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android">300</On>
+                            <On Platform="iOS">400</On>
+                        </OnPlatform>
+                    </CarouselView.HeightRequest>
+                    <CarouselView.PeekAreaInsets>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android">150</On>
+                            <On Platform="iOS">50</On>
+                        </OnPlatform>
+                    </CarouselView.PeekAreaInsets>
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal"
+                                           ItemSpacing="20" />
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Margin="0,10"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="CenterAndExpand"
+                                   Padding="0">
+                                <Frame.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android">250</On>
+                                        <On Platform="iOS">350</On>
+                                    </OnPlatform>
+                                </Frame.HeightRequest>
+                                <Frame.WidthRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android">150</On>
+                                        <On Platform="iOS">250</On>
+                                    </OnPlatform>
+                                </Frame.WidthRequest>
+                                <StackLayout Orientation="Vertical">
+                                    <Frame HeightRequest="200"
+                                           VerticalOptions="FillAndExpand"
+                                           BackgroundColor="{Binding Color}">
+                                        <Image Source="{Binding Image}" />
                                     </Frame>
+                                    <StackLayout HeightRequest="150"
+                                                 Orientation="Vertical"
+                                                 Padding="10,20">
+                                        <Label Text="{Binding SecondaryTitle}"
+                                               TextColor="Black"
+                                               FontAttributes="Italic"
+                                               HorizontalOptions="Start"
+                                               MaxLines="5"
+                                               LineBreakMode="TailTruncation" />
+                                        <Label Text="{Binding PrimaryTitle}"
+                                               TextColor="Black"
+                                               FontAttributes="Bold"
+                                               FontSize="Large"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center" />
+                                        <Label Text="{Binding Content}"
+                                               TextColor="Black" />
+                                    </StackLayout>
                                 </StackLayout>
-                            </DataTemplate>
-                        </CarouselView.ItemTemplate>
-                    </CarouselView>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
             </StackLayout>
-            <Frame HeightRequest="100" VerticalOptions="End" BackgroundColor="White">
-                <StackLayout Orientation="Vertical" >
-                    <Label Text="YOUR SAFE ACCOUNT" CharacterSpacing="1.5" TextColor="SlateGray" />
-                    <Label Text="Securely access your SAFE Network Account" CharacterSpacing="0.25" />
+                <StackLayout Orientation="Vertical"
+                             VerticalOptions="End"
+                             HorizontalOptions="FillAndExpand"
+                             BackgroundColor="White"
+                             Spacing="10">
+                    <StackLayout.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="10"/>
+                                <On Platform="iOS" Value="15,10,15,20"/>
+                        </OnPlatform>
+                    </StackLayout.Padding>
+                    <StackLayout.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android">100</On>
+                        <On Platform="iOS">100</On>
+                    </OnPlatform>
+                    </StackLayout.HeightRequest>
+                    <Label Text="YOUR SAFE ACCOUNT"
+                           CharacterSpacing="1.5"
+                           TextColor="SlateGray" />
+                    <Label Text="Securely access your SAFE Network Account"
+                           CharacterSpacing="0.25" />
                     <Button VerticalOptions="End"
                             HorizontalOptions="End"
-                            HeightRequest="50"
                             WidthRequest="120"
                             CornerRadius="25"
                             ImageSource="lock"
                             ContentLayout="Left,2"
                             Text="LOG IN"
-                            BackgroundColor= "{StaticResource SecondaryColor}"
+                            BackgroundColor="{StaticResource SecondaryColor}"
                             Padding="0"
                             TextColor="White">
-                        </Button>
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android">35</On>
+                                <On Platform="iOS">50</On>
+                            </OnPlatform>
+                        </Button.HeightRequest>
+                    </Button>
                 </StackLayout>
-            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
