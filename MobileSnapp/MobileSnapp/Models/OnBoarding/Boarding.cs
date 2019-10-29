@@ -44,5 +44,8 @@ namespace MobileSnapp.Models.Onboarding
 
         [DataMember(Name = "color")]
         public string Color { get; set; }
+
+        [DataMember(Name = "image")]
+        public string Image { get; set; }
     }
 }

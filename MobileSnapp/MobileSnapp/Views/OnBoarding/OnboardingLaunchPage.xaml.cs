@@ -26,6 +26,7 @@ using Xamarin.Forms;
         {
             Navigation.PushAsync(new Onboading.LoginPage());
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -35,11 +36,6 @@ using Xamarin.Forms;
                 _viewModel = new OnBoardingLaunchViewModel();
                 BindingContext = _viewModel;
             }
-        }
-
-        private void OpenLoginPage(object sender, System.EventArgs e)
-        {
-            Navigation.PushAsync(new Onboading.LoginPage());
         }
     }
 }
