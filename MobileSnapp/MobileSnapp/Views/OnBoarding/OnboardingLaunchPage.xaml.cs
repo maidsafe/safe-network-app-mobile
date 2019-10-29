@@ -16,6 +16,7 @@ namespace MobileSnapp.Views.Onboarding
         {
             Navigation.PushAsync(new Onboading.LoginPage());
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -25,11 +26,6 @@ namespace MobileSnapp.Views.Onboarding
                 _viewModel = new OnBoardingLaunchViewModel();
                 BindingContext = _viewModel;
             }
-        }
-
-        private void OpenLoginPage(object sender, System.EventArgs e)
-        {
-            Navigation.PushAsync(new Onboading.LoginPage());
         }
     }
 }
