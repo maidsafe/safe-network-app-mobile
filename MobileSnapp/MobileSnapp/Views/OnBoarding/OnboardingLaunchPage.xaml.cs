@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿// Copyright 2019 MaidSafe.net limited.
+﻿﻿// Copyright 2019 MaidSafe.net limited.
 //
 // This SAFE Network Software is licensed to you under the MIT license <LICENSE-MIT
 // https://opensource.org/licenses/MIT> or the Modified BSD license <LICENSE-BSD
@@ -9,9 +8,6 @@
 // Software.
 
 using MobileSnapp.ViewModels.Onboarding;
-=======
-﻿using MobileSnapp.ViewModels.Onboarding;
->>>>>>> feat(homePage): add carousel view and bind to view model
 using Xamarin.Forms;
 
 namespace MobileSnapp.Views.Onboarding
@@ -29,10 +25,7 @@ namespace MobileSnapp.Views.Onboarding
         {
             Navigation.PushAsync(new Onboading.LoginPage());
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> feat(homePage): add carousel view and bind to view model
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -42,11 +35,6 @@ namespace MobileSnapp.Views.Onboarding
                 _viewModel = new OnBoardingLaunchViewModel();
                 BindingContext = _viewModel;
             }
-        }
-
-        private void OpenLoginPage(object sender, System.EventArgs e)
-        {
-            Navigation.PushAsync(new Onboading.LoginPage());
         }
     }
 }
