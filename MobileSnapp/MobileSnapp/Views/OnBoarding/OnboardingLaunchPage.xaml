@@ -31,27 +31,21 @@
                HorizontalOptions="StartAndExpand"
                TextColor="White"
                FontSize="Medium" />
-        <Label FontFamily="{StaticResource Material}"
-               Text="{x:Static icons:IconFont.DotsVertical}"
-               TextColor="GhostWhite"
-               FontSize="Medium"
-               HorizontalOptions="EndAndExpand" />
         </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout Spacing="0" BackgroundColor="{StaticResource PrimaryColor}">
-            <StackLayout Orientation="Vertical"
-                         HorizontalOptions="FillAndExpand"
-                         VerticalOptions="CenterAndExpand"
-                         Padding="10, 0">
+        <StackLayout Spacing="0" Orientation="Vertical"
+                     BackgroundColor="{StaticResource PrimaryColor}">
                 <Label Text="Getting Started"
-                       TextColor="Wheat"
+                       Style="{StaticResource TertiaryTextColor}"
                        HorizontalOptions="Start"
-                       VerticalOptions="End"
-                       Margin="20,0,0,0" />
-                <CarouselView ItemsSource="{Binding Boardings}"
-                              HorizontalOptions="Center"
+                       VerticalOptions="EndAndExpand"
+                       Margin="30,0,0,0" />
+                <CarouselView ItemsSource="{Binding OnBoardingLaunchItems}"
+                              Margin="10, 0"
+                              HorizontalOptions="CenterAndExpand"
+                              VerticalOptions="CenterAndExpand"
                               VerticalScrollBarVisibility="Never"
                               HorizontalScrollBarVisibility="Never">
                     <CarouselView.HeightRequest>
@@ -98,26 +92,25 @@
                                                  Orientation="Vertical"
                                                  Padding="10,20">
                                         <Label Text="{Binding SecondaryTitle}"
-                                               TextColor="Black"
+                                               Style="{StaticResource SecondaryTextColor}"
                                                FontAttributes="Italic"
                                                HorizontalOptions="Start"
                                                MaxLines="5"
                                                LineBreakMode="TailTruncation" />
                                         <Label Text="{Binding PrimaryTitle}"
-                                               TextColor="Black"
+                                               Style="{StaticResource PrimaryTextColor}"
                                                FontAttributes="Bold"
                                                FontSize="Large"
                                                HorizontalOptions="Center"
                                                VerticalOptions="Center" />
                                         <Label Text="{Binding Content}"
-                                               TextColor="Black" />
+                                               Style="{StaticResource SecondaryTextColor}"/>
                                     </StackLayout>
                                 </StackLayout>
                             </Frame>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
-            </StackLayout>
                 <StackLayout Orientation="Vertical"
                              VerticalOptions="End"
                              HorizontalOptions="FillAndExpand"
@@ -137,8 +130,9 @@
                     </StackLayout.HeightRequest>
                     <Label Text="YOUR SAFE ACCOUNT"
                            CharacterSpacing="1.5"
-                           TextColor="SlateGray" />
+                           Style="{StaticResource SecondaryTextColor}" />
                     <Label Text="Securely access your SAFE Network Account"
+                           Style="{StaticResource PrimaryTextColor}"
                            CharacterSpacing="0.25" />
                     <Button VerticalOptions="End"
                             HorizontalOptions="End"
