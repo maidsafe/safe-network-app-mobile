@@ -12,5 +12,29 @@
         </OnPlatform>
         <Color x:Key="PrimaryColor">#303F9F</Color>
         <Color x:Key="SecondaryColor">#FF5722</Color>
+
+         <Style TargetType="Label"
+               x:Key="PrimaryTextColor">
+            <Setter Property="TextColor"
+                    Value="#000000" />
+             <Setter Property="Opacity"
+                     Value="0.87"/>
+         </Style>
+
+        <Style TargetType="Label"
+               x:Key="SecondaryTextColor">
+            <Setter Property="TextColor"
+                    Value="#000000" />
+             <Setter Property="Opacity"
+                     Value="0.6"/>
+        </Style>
+
+        <Style TargetType="Label"
+               x:Key="TertiaryTextColor">
+            <Setter Property="TextColor"
+                    Value="#FFFFFF" />
+             <Setter Property="Opacity"
+                     Value="0.7"/>
+        </Style>
     </Application.Resources>
 </Application>

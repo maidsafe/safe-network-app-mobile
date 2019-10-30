@@ -31,15 +31,13 @@ namespace MobileSnapp.ViewModels.Onboarding
 
         private int selectedIndex;
 
-        private ObservableCollection<CreateAccountOnboardingItem> _onBordingOptions;
-
         #endregion
 
         #region Constructor
 
         public OnBoardingLaunchViewModel()
         {
-            Boardings = new ObservableCollection<CarouselItem>(
+            OnBoardingLaunchItems = new ObservableCollection<CarouselItem>(
                ContentHelpers.PopulateData<OnboardingLaunch>(
                    _staticContentFile)
                .CarouselItems);
@@ -69,16 +67,10 @@ namespace MobileSnapp.ViewModels.Onboarding
         /// <summary>
         /// Gets or sets the boardings collection.
         /// </summary>
-        public ObservableCollection<CarouselItem> Boardings
+        public ObservableCollection<CarouselItem> OnBoardingLaunchItems
         {
             get => boardings;
             set => SetProperty(ref boardings, value);
-        }
-
-        public ObservableCollection<CreateAccountOnboardingItem> OnBordingOptions
-        {
-            get { return _onBordingOptions; }
-            set { _onBordingOptions = value; }
         }
 
         public string NextButtonText
@@ -116,7 +108,7 @@ namespace MobileSnapp.ViewModels.Onboarding
 
         private void ValidateSelection()
         {
-            NextButtonText = selectedIndex < Boardings.Count - 1 ? "NEXT" : "DONE";
+            NextButtonText = selectedIndex < OnBoardingLaunchItems.Count - 1 ? "NEXT" : "DONE";
         }
 
         /// <summary>
@@ -154,7 +146,7 @@ namespace MobileSnapp.ViewModels.Onboarding
                 return false;
             }
 
-            if (selectedIndex >= Boardings.Count - 1)
+            if (selectedIndex >= OnBoardingLaunchItems.Count - 1)
                 return true;
 
             SelectedIndex++;
