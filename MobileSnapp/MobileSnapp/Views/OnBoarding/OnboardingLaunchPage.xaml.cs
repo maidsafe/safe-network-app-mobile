@@ -1,4 +1,4 @@
-// Copyright 2019 MaidSafe.net limited.
+﻿// Copyright 2019 MaidSafe.net limited.
 //
 // This SAFE Network Software is licensed to you under the MIT license <LICENSE-MIT
 // https://opensource.org/licenses/MIT> or the Modified BSD license <LICENSE-BSD
@@ -9,7 +9,7 @@
 
 ﻿using Xamarin.Forms;
 
-namespace MobileSnapp.Views.Onboarding
+﻿namespace MobileSnapp.Views.Onboarding
 {
     public partial class OnboardingLaunchPage : ContentPage
     {
