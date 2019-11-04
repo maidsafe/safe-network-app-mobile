@@ -18,7 +18,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new OnboardingLaunchPage()) { BarBackgroundColor = Color.FromHex("283593") };
+            MainPage = new NavigationPage(new CreateAccountOnboarding());
         }
 
         protected override void OnStart()

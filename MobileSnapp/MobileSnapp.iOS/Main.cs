@@ -7,9 +7,9 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-﻿using UIKit;
+using UIKit;
 
-﻿namespace MobileSnapp.iOS
+namespace MobileSnapp.IOS
 {
     public class Application
     {
