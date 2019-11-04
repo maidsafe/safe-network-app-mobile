@@ -11,7 +11,7 @@ using Foundation;
 using UIKit;
 using Xamarin.Forms;
 
-namespace MobileSnapp.iOS
+namespace MobileSnapp.IOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to

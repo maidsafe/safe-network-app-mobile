@@ -8,23 +8,25 @@
 // Software.
 
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 using MobileSnapp.Helpers;
 using MobileSnapp.Models.Onboarding;
 using MvvmHelpers;
+using Xamarin.Forms;
 
 namespace MobileSnapp.ViewModels.Onboarding
 {
     public class CreateAccountOnboardingViewModel : BaseViewModel
     {
+        #region Fields
+
         private const string _staticContentFile = "CreateAccountOnboarding.json";
 
         private ObservableCollection<CreateAccountOnboardingItem> _onBordingOptions;
 
-        public ObservableCollection<CreateAccountOnboardingItem> OnBordingOptions
-        {
-            get { return _onBordingOptions; }
-            set { _onBordingOptions = value; }
-        }
+        #endregion
+
+        #region Constructor
 
         public CreateAccountOnboardingViewModel()
         {
@@ -33,5 +35,34 @@ namespace MobileSnapp.ViewModels.Onboarding
                     _staticContentFile)
                 .CreateAccountOnboarding);
         }
+
+        #endregion
+
+        #region Commands
+
+        /// <summary>
+        /// Gets or sets the command that is executed when the Back button is clicked.
+        /// </summary>
+        public ICommand BackCommand { get; set; }
+
+        /// <summary>
+        /// Gets or sets the command that is executed when the Done button is clicked.
+        /// </summary>
+        public ICommand NextCommand { get; set; }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Gets or set the create account onboarding item.
+        /// </summary>
+        public ObservableCollection<CreateAccountOnboardingItem> OnBordingOptions
+        {
+            get { return _onBordingOptions; }
+            set { _onBordingOptions = value; }
+        }
+
+        #endregion
     }
 }

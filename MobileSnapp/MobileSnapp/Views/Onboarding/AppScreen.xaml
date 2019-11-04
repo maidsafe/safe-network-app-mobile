@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileSnapp.Views.Onboarding.AppScreen">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+            <Button VerticalOptions="End"
+                    HorizontalOptions="End"
+                    WidthRequest="140"
+                    CornerRadius="27"
+                    ImageSource="download"
+                    ContentLayout="Left"
+                    Text="GET BROWSER"
+                    BackgroundColor="{StaticResource PrimaryColor}"
+                    TextColor="White">
+                    <Button.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android">35</On>
+                            <On Platform="iOS">60</On>
+                        </OnPlatform>
+                    </Button.HeightRequest>
+            </Button>
+            <Button VerticalOptions="End"
+                            HorizontalOptions="End"
+                            WidthRequest="90"
+                            CornerRadius="27"
+                            ImageSource="launch"
+                            ContentLayout="Left"
+                            Text="OPEN"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android">35</On>
+                                <On Platform="iOS">60</On>
+                            </OnPlatform>
+                        </Button.HeightRequest>
+                    </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

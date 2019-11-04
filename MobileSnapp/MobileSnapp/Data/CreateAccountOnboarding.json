@@ -3,17 +3,17 @@
     {
       "title": "Your secure, private digital life.",
       "content": "Use apps, communicate with others, and store data in complete privacy with a SAFE Account.",
-      "image": ""
+      "image": "shield"
     },
     {
       "title": "Pay as you go with Safecoin. Not with you privacy.",
       "content": "You don't pay for services by sacrificing privacy. You pay only for what you use, in a currency called Safecoin.",
-      "image": ""
+      "image": "safecoin"
     },
     {
       "title": "Earn Safecoin with a Vault.",
       "content": "You can pay for your account by running a Vault on your home computer. Contribute computer power to the network and be rewarded for it.",
-      "image": ""
+      "image": "vault_large"
     }
   ],
   "createAccountOptionList": [
