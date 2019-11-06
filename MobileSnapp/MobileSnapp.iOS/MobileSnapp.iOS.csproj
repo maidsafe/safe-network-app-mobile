@@ -135,9 +135,9 @@
     <BundleResource Include="Resources\safenetworklogo.png" />
     <BundleResource Include="Resources\lock.png" />
     <BundleResource Include="Resources\vault.png" />
-    <BundleResource Include="Resources\someone.png" />
     <BundleResource Include="Resources\browser.png" />
-    <BundleResource Include="Resources\safe.png" />
+    <BundleResource Include="Resources\getInvolved.png" />
+    <BundleResource Include="Resources\safelogowhite.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

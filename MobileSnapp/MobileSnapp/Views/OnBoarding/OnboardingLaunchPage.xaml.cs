@@ -7,7 +7,6 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-using Xamarin.Forms;
 using MobileSnapp.ViewModels.Onboarding;
 using Xamarin.Forms;
 
