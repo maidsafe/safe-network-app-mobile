@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileSnapp.Views.CustomViews.NavbarView">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal"
+                     Padding="10,0,0,0"
+                     Spacing="10">
+            <Image  Source="safelogowhite"
+                    VerticalOptions="Center"
+                    HeightRequest="30"
+                    WidthRequest="30" />
+            <Label Text="SAFE NETWORK"
+                    VerticalTextAlignment="Center"
+                    HeightRequest="30"
+                    TextColor="White"
+                    FontSize="Medium" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

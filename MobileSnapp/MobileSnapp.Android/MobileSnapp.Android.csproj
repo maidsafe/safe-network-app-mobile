@@ -97,7 +97,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\someone.png">
+    <AndroidResource Include="Resources\drawable\getInvolved.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -105,11 +105,11 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\safe.png">
+    <AndroidResource Include="Resources\drawable\lock.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\lock.png">
+    <AndroidResource Include="Resources\drawable\safelogowhite.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

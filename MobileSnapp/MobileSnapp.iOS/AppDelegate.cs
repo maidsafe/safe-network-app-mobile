@@ -9,7 +9,6 @@
 
 using Foundation;
 using UIKit;
-using UIKit;
 using Xamarin.Forms;
 
 ﻿namespace MobileSnapp.iOS
