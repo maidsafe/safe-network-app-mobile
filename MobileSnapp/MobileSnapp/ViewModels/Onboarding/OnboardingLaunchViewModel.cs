@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿// Copyright 2019 MaidSafe.net limited.
 //
 // This SAFE Network Software is licensed to you under the MIT license <LICENSE-MIT
@@ -9,10 +8,6 @@
 // Software.
 
 using System.Collections.ObjectModel;
-using System.Windows.Input;
-=======
-﻿using System.Collections.ObjectModel;
->>>>>>> refactor(homePage): refactor font and unnecessary code
 using MobileSnapp.Helpers;
 using MobileSnapp.Models.Onboarding;
 using MvvmHelpers;

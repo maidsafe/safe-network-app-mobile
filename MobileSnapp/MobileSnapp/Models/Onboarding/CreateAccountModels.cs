@@ -8,7 +8,6 @@
 // Software.
 
 using System.Collections.Generic;
-﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace MobileSnapp.Models.Onboarding
