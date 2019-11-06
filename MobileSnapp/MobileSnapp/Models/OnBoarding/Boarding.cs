@@ -6,7 +6,8 @@
 // modified, or distributed except according to those terms. Please review the Licences for the
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
-﻿using System.Collections.Generic;
+
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace MobileSnapp.Models.Onboarding

@@ -10,7 +10,7 @@
 using MobileSnapp.ViewModels.Onboarding;
 using Xamarin.Forms;
 
-﻿namespace MobileSnapp.Views.Onboarding
+namespace MobileSnapp.Views.Onboarding
 {
     public partial class OnboardingLaunchPage : ContentPage
     {
