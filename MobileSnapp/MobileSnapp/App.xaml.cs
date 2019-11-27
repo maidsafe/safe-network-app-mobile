@@ -18,7 +18,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new CreateAccountOnboarding());
+            MainPage = new NavigationPage(new OnboardingLaunchPage());
         }
 
         protected override void OnStart()
