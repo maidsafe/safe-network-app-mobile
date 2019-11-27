@@ -140,7 +140,8 @@
                         Text="LOG IN"
                         BackgroundColor="{StaticResource SecondaryColor}"
                         Padding="0"
-                        TextColor="White">
+                        TextColor="White"
+                        x:Name="LoginButton">
                     <Button.HeightRequest>
                         <OnPlatform x:TypeArguments="x:Double">
                             <On Platform="Android">35</On>

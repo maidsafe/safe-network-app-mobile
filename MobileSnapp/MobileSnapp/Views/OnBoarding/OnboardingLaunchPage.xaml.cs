@@ -19,6 +19,13 @@ namespace MobileSnapp.Views.Onboarding
         public OnboardingLaunchPage()
         {
             InitializeComponent();
+
+            // Todo: Dummy code for the testing, needs to be implemented properly
+            LoginButton.Clicked += (s, e) =>
+            {
+                var createAccountModalPage = new NavigationPage(new CreateAccountOnboarding());
+                Navigation.PushModalAsync(createAccountModalPage);
+            };
         }
 
         private void OpenLoginPage(object sender, System.EventArgs e)
