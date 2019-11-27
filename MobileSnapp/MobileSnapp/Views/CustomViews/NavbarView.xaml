@@ -11,10 +11,10 @@
                     HeightRequest="30"
                     WidthRequest="30" />
             <Label Text="SAFE NETWORK"
-                    VerticalTextAlignment="Center"
-                    HeightRequest="30"
-                    TextColor="White"
-                    FontSize="Medium" />
+                   VerticalTextAlignment="Center"
+                   HeightRequest="30"
+                   TextColor="White"
+                   FontSize="Medium" />
         </StackLayout>
     </ContentView.Content>
 </ContentView>

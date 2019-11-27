@@ -92,67 +92,20 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\drawable\safenetworklogo.png" />
-    <AndroidResource Include="Resources\drawable\browser.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\getInvolved.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\safe.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\lock.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\safecoin.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\shield.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\vault.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\lock.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\safelogowhite.png">
-    <AndroidResource Include="Resources\drawable\bottom_shadow.xml">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\top_shadow.xml">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\vault_large.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\download.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\launch.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\browser.png" />
+    <AndroidResource Include="Resources\drawable\getInvolved.png" />
+    <AndroidResource Include="Resources\drawable\safe.png" />
+    <AndroidResource Include="Resources\drawable\lock.png" />
+    <AndroidResource Include="Resources\drawable\safecoin.png" />
+    <AndroidResource Include="Resources\drawable\shield.png" />
+    <AndroidResource Include="Resources\drawable\vault.png" />
+    <AndroidResource Include="Resources\drawable\lock.png" />
+    <AndroidResource Include="Resources\drawable\safelogowhite.png" />
+    <AndroidResource Include="Resources\drawable\bottom_shadow.xml" />
+    <AndroidResource Include="Resources\drawable\top_shadow.xml" />
+    <AndroidResource Include="Resources\drawable\vault_large.png" />
+    <AndroidResource Include="Resources\drawable\download.png" />
+    <AndroidResource Include="Resources\drawable\launch.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

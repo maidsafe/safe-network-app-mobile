@@ -19,12 +19,23 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" Padding="0" BackgroundColor="White">
-            <Label FontFamily="{StaticResource Material}" Text="{x:Static icons:IconFont.Close}" Style="{StaticResource TertiaryTextColor}" FontSize="Medium" HorizontalOptions="Start" />
-            <Label Text="SAFE NETWORK" HorizontalOptions="CenterAndExpand" Style="{StaticResource PrimaryTextColor}" FontSize="Medium" />
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Margin="0"
+                     Padding="0"
+                     BackgroundColor="White">
+            <Label FontFamily="{StaticResource Material}"
+                   Text="{x:Static icons:IconFont.Close}"
+                   Style="{StaticResource PrimaryLightTextColor}"
+                   FontSize="Medium"
+                   HorizontalOptions="Start" />
+            <Label Text="SAFE NETWORK"
+                   HorizontalOptions="CenterAndExpand"
+                   Style="{StaticResource PrimaryDarkLabelStyle}"
+                   FontSize="Medium" />
         </StackLayout>
     </NavigationPage.TitleView>
-
 
     <ContentPage.Content>
         <StackLayout>
@@ -35,50 +46,50 @@
                           HorizontalScrollBarVisibility="Never">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
+                        <StackLayout Orientation="Vertical"
+                                     HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand"
+                                     Spacing="20">
+                            <Image Source="{Binding Image}"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand">
+                                <Image.HeightRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android">200</On>
+                                        <On Platform="iOS">250</On>
+                                    </OnPlatform>
+                                </Image.HeightRequest>
+                                <Image.WidthRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android">200</On>
+                                        <On Platform="iOS">250</On>
+                                    </OnPlatform>
+                                </Image.WidthRequest>
+                            </Image>
                             <StackLayout Orientation="Vertical"
-                                         HorizontalOptions="CenterAndExpand"
-                                         VerticalOptions="CenterAndExpand"
-                                         Spacing="20">
-                                    <Image Source="{Binding Image}"
-                                           HorizontalOptions="CenterAndExpand"
-                                           VerticalOptions="CenterAndExpand">
-                                        <Image.HeightRequest>
-                                             <OnPlatform x:TypeArguments="x:Double">
-                                                <On Platform="Android">200</On>
-                                                <On Platform="iOS">250</On>
-                                             </OnPlatform>
-                                        </Image.HeightRequest>
-                                        <Image.WidthRequest>
-                                             <OnPlatform x:TypeArguments="x:Double">
-                                                <On Platform="Android">200</On>
-                                                <On Platform="iOS">250</On>
-                                             </OnPlatform>
-                                        </Image.WidthRequest>
-                                    </Image>
-                                    <StackLayout Orientation="Vertical"
-                                                 VerticalOptions="StartAndExpand"
-                                                 Padding="20,0"
-                                                 Spacing="10">
-                                        <StackLayout.Spacing>
-                                             <OnPlatform x:TypeArguments="x:Double">
-                                                <On Platform="Android">30</On>
-                                                <On Platform="iOS">20</On>
-                                             </OnPlatform>
-                                        </StackLayout.Spacing>
-                                        <Label  Text="{Binding Title}"
-                                                FontSize="Subtitle"
-                                                FontAttributes="Bold"
-                                                Style="{StaticResource PrimaryTextColor}"
-                                                CharacterSpacing="0.15"
-                                                HorizontalOptions="CenterAndExpand"/>
-                                        <Label  Text="{Binding Content}"
-                                                MaxLines="4"
-                                                CharacterSpacing="0.25"
-                                                Style="{StaticResource SecondaryTextColor}"
-                                                HorizontalOptions="CenterAndExpand"/>
-                                    </StackLayout>
-
+                                         VerticalOptions="StartAndExpand"
+                                         Padding="20,0"
+                                         Spacing="10">
+                                <StackLayout.Spacing>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android">30</On>
+                                        <On Platform="iOS">20</On>
+                                    </OnPlatform>
+                                </StackLayout.Spacing>
+                                <Label  Text="{Binding Title}"
+                                        FontSize="Subtitle"
+                                        FontAttributes="Bold"
+                                        Style="{StaticResource PrimaryDarkLabelStyle}"
+                                        CharacterSpacing="0.15"
+                                        HorizontalOptions="CenterAndExpand" />
+                                <Label  Text="{Binding Content}"
+                                        MaxLines="4"
+                                        CharacterSpacing="0.25"
+                                        Style="{StaticResource SecondaryDarkLabelStyle}"
+                                        HorizontalOptions="CenterAndExpand" />
                             </StackLayout>
+
+                        </StackLayout>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
@@ -90,9 +101,11 @@
                          BackgroundColor="#FAFAFA">
                 <StackLayout.Padding>
                     <OnPlatform x:TypeArguments="Thickness">
-                         <On Platform="Android" Value="15"/>
-                         <On Platform="iOS" Value="25,20"/>
-                     </OnPlatform>
+                        <On Platform="Android"
+                            Value="15" />
+                        <On Platform="iOS"
+                            Value="25,20" />
+                    </OnPlatform>
                 </StackLayout.Padding>
                 <Label Text="BACK"
                        TextColor="{StaticResource PrimaryColor}"

@@ -20,133 +20,135 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        <customViews:NavbarView/>
+        <customViews:NavbarView />
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Spacing="0"
                      Orientation="Vertical"
                      BackgroundColor="{StaticResource PrimaryColor}">
-                <Label Text="Getting Started"
-                       Style="{StaticResource PrimaryLightLabelStyle}"
-                       VerticalOptions="EndAndExpand"
-                       Margin="20, 0"/>
-                <CarouselView ItemsSource="{Binding OnBoardingLaunchItems}"
-                              Margin="10,0"
-                              HorizontalOptions="CenterAndExpand"
-                              VerticalOptions="CenterAndExpand"
-                              VerticalScrollBarVisibility="Never"
-                              HorizontalScrollBarVisibility="Never">
-                    <CarouselView.HeightRequest>
-                        <OnPlatform x:TypeArguments="x:Double">
-                            <On Platform="Android">300</On>
-                            <On Platform="iOS">400</On>
-                        </OnPlatform>
-                    </CarouselView.HeightRequest>
-                    <CarouselView.PeekAreaInsets>
-                        <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android">150</On>
-                            <On Platform="iOS">50</On>
-                        </OnPlatform>
-                    </CarouselView.PeekAreaInsets>
-                    <CarouselView.ItemsLayout>
-                        <LinearItemsLayout Orientation="Horizontal"
-                                           ItemSpacing="20" />
-                    </CarouselView.ItemsLayout>
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame VerticalOptions="CenterAndExpand"
-                                   Padding="0">
-                                <Frame.HeightRequest>
-                                    <OnPlatform x:TypeArguments="x:Double">
-                                        <On Platform="Android">250</On>
-                                        <On Platform="iOS">350</On>
-                                    </OnPlatform>
-                                </Frame.HeightRequest>
-                                <Frame.WidthRequest>
-                                    <OnPlatform x:TypeArguments="x:Double">
-                                        <On Platform="Android">150</On>
-                                        <On Platform="iOS">250</On>
-                                    </OnPlatform>
-                                </Frame.WidthRequest>
+            <Label Text="Getting Started"
+                   Style="{StaticResource PrimaryLightLabelStyle}"
+                   VerticalOptions="EndAndExpand"
+                   Margin="20, 0" />
+            <CarouselView ItemsSource="{Binding OnBoardingLaunchItems}"
+                          Margin="10,0"
+                          HorizontalOptions="CenterAndExpand"
+                          VerticalOptions="CenterAndExpand"
+                          VerticalScrollBarVisibility="Never"
+                          HorizontalScrollBarVisibility="Never">
+                <CarouselView.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android">300</On>
+                        <On Platform="iOS">400</On>
+                    </OnPlatform>
+                </CarouselView.HeightRequest>
+                <CarouselView.PeekAreaInsets>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android">150</On>
+                        <On Platform="iOS">50</On>
+                    </OnPlatform>
+                </CarouselView.PeekAreaInsets>
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"
+                                       ItemSpacing="20" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame VerticalOptions="CenterAndExpand"
+                               Padding="0">
+                            <Frame.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android">250</On>
+                                    <On Platform="iOS">350</On>
+                                </OnPlatform>
+                            </Frame.HeightRequest>
+                            <Frame.WidthRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android">150</On>
+                                    <On Platform="iOS">250</On>
+                                </OnPlatform>
+                            </Frame.WidthRequest>
+                            <StackLayout Orientation="Vertical">
+                                <Frame HeightRequest="200"
+                                       VerticalOptions="FillAndExpand"
+                                       BackgroundColor="{Binding Color}">
+                                    <Image Source="{Binding Image}" />
+                                </Frame>
                                 <StackLayout Orientation="Vertical">
-                                    <Frame HeightRequest="200"
-                                           VerticalOptions="FillAndExpand"
-                                           BackgroundColor="{Binding Color}">
-                                        <Image Source="{Binding Image}" />
-                                    </Frame>
-                                    <StackLayout Orientation="Vertical">
-                                        <StackLayout.Padding>
-                                            <OnPlatform x:TypeArguments="Thickness">
-                                                <On Platform="Android">10,10,10,25</On>
-                                                <On Platform="iOS">10,20</On>
-                                            </OnPlatform>
-                                        </StackLayout.Padding>
-                                        <StackLayout.HeightRequest>
-                                            <OnPlatform x:TypeArguments="x:Double">
-                                                <On Platform="Android">120</On>
-                                                <On Platform="iOS">150</On>
-                                            </OnPlatform>
-                                        </StackLayout.HeightRequest>
-                                        <Label Text="{Binding SecondaryTitle}"
-                                               Style="{StaticResource SecondaryDarkLabelStyle}"
-                                               HorizontalOptions="Start"
-                                               MaxLines="5" />
-                                        <Label Text="{Binding PrimaryTitle}"
-                                               Style="{StaticResource PrimaryDarkLabelStyle}"
-                                               FontAttributes="Bold"
-                                               FontSize="Medium"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="Center" />
-                                        <Label Text="{Binding Content}"
-                                               Style="{StaticResource SecondaryDarkLabelStyle}"/>
-                                    </StackLayout>
+                                    <StackLayout.Padding>
+                                        <OnPlatform x:TypeArguments="Thickness">
+                                            <On Platform="Android">10,10,10,25</On>
+                                            <On Platform="iOS">10,20</On>
+                                        </OnPlatform>
+                                    </StackLayout.Padding>
+                                    <StackLayout.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <On Platform="Android">120</On>
+                                            <On Platform="iOS">150</On>
+                                        </OnPlatform>
+                                    </StackLayout.HeightRequest>
+                                    <Label Text="{Binding SecondaryTitle}"
+                                           Style="{StaticResource SecondaryDarkLabelStyle}"
+                                           HorizontalOptions="Start"
+                                           MaxLines="5" />
+                                    <Label Text="{Binding PrimaryTitle}"
+                                           Style="{StaticResource PrimaryDarkLabelStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="Medium"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center" />
+                                    <Label Text="{Binding Content}"
+                                           Style="{StaticResource SecondaryDarkLabelStyle}" />
                                 </StackLayout>
-                            </Frame>
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
-                <StackLayout Orientation="Vertical"
-                             VerticalOptions="EndAndExpand"
-                             HorizontalOptions="FillAndExpand"
-                             BackgroundColor="White"
-                             Spacing="10">
-                    <StackLayout.Padding>
-                        <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android" Value="10"/>
-                            <On Platform="iOS" Value="15"/>
-                        </OnPlatform>
-                    </StackLayout.Padding>
-                    <StackLayout.HeightRequest>
-                        <OnPlatform x:TypeArguments="x:Double">
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="EndAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="White"
+                         Spacing="10">
+                <StackLayout.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android"
+                            Value="10" />
+                        <On Platform="iOS"
+                            Value="15" />
+                    </OnPlatform>
+                </StackLayout.Padding>
+                <StackLayout.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
                         <On Platform="Android">100</On>
                         <On Platform="iOS">80</On>
                     </OnPlatform>
-                    </StackLayout.HeightRequest>
-                    <Label Text="YOUR SAFE ACCOUNT"
-                           CharacterSpacing="1.5"
-                           Style="{StaticResource SecondaryDarkLabelStyle}" />
-                    <Label Text="Securely access your SAFE Network Account"
-                           Style="{StaticResource PrimaryDarkLabelStyle}"
-                           CharacterSpacing="0.25" />
-                    <Button VerticalOptions="End"
-                            HorizontalOptions="End"
-                            WidthRequest="120"
-                            CornerRadius="25"
-                            ImageSource="lock"
-                            ContentLayout="Left,2"
-                            Text="LOG IN"
-                            BackgroundColor="{StaticResource SecondaryColor}"
-                            Padding="0"
-                            TextColor="White">
-                        <Button.HeightRequest>
-                            <OnPlatform x:TypeArguments="x:Double">
-                                <On Platform="Android">35</On>
-                                <On Platform="iOS">50</On>
-                            </OnPlatform>
-                        </Button.HeightRequest>
-                    </Button>
-                </StackLayout>
+                </StackLayout.HeightRequest>
+                <Label Text="YOUR SAFE ACCOUNT"
+                       CharacterSpacing="1.5"
+                       Style="{StaticResource SecondaryDarkLabelStyle}" />
+                <Label Text="Securely access your SAFE Network Account"
+                       Style="{StaticResource PrimaryDarkLabelStyle}"
+                       CharacterSpacing="0.25" />
+                <Button VerticalOptions="End"
+                        HorizontalOptions="End"
+                        WidthRequest="120"
+                        CornerRadius="25"
+                        ImageSource="lock"
+                        ContentLayout="Left,2"
+                        Text="LOG IN"
+                        BackgroundColor="{StaticResource SecondaryColor}"
+                        Padding="0"
+                        TextColor="White">
+                    <Button.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android">35</On>
+                            <On Platform="iOS">50</On>
+                        </OnPlatform>
+                    </Button.HeightRequest>
+                </Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
