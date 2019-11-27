@@ -45,8 +45,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\CustomViews\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildThisFileDirectory)..\CodeStyles.targets" />
 </Project>
