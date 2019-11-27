@@ -62,11 +62,8 @@
   <ItemGroup>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
-<<<<<<< HEAD
-=======
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ControlRenderers\ShadowBoxViewRenderer.cs" />
->>>>>>> feat(Account Onbarding): interim commit for create account onboarding
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -148,7 +145,6 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\someone.png" />
     <BundleResource Include="Resources\browser.png" />
     <BundleResource Include="Resources\safecoin.png" />
