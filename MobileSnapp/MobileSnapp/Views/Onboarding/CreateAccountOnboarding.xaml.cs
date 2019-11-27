@@ -7,18 +7,10 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MobileSnapp.Views.Onboarding
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreateAccountOnboarding : ContentPage
     {
         public CreateAccountOnboarding()
