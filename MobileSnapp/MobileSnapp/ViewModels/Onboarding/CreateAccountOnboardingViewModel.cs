@@ -11,7 +11,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using MobileSnapp.Helpers;
 using MobileSnapp.Models.Onboarding;
-using MobileSnapp.Views.OnBoarding;
+using MobileSnapp.Views.Onboarding;
 using MvvmHelpers;
 using Xamarin.Forms;
 
