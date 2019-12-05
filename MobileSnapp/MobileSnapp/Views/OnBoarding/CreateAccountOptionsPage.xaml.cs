@@ -10,7 +10,7 @@
 using MobileSnapp.ViewModels.Onboarding;
 using Xamarin.Forms;
 
-namespace MobileSnapp.Views.OnBoarding
+namespace MobileSnapp.Views.Onboarding
 {
     public partial class CreateAccountOptionsPage : ContentPage
     {

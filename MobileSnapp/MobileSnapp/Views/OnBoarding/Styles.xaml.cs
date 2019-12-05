@@ -7,7 +7,7 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-namespace MobileSnapp.Views.OnBoarding
+namespace MobileSnapp.Views.Onboarding
 {
     public partial class Styles
     {
