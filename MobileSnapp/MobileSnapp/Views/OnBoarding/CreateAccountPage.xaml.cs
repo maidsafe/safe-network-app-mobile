@@ -11,9 +11,9 @@ using Xamarin.Forms;
 
 namespace MobileSnapp.Views.Onboarding
 {
-    public partial class CreateAccount : ContentPage
+    public partial class CreateAccountPage : ContentPage
     {
-        public CreateAccount()
+        public CreateAccountPage()
         {
             InitializeComponent();
         }

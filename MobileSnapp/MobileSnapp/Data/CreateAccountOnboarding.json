@@ -18,7 +18,7 @@
   ],
   "createAccountOptionList": [
     {
-      "title": "Get an Invite",
+      "title": "Get an Account Invite",
       "content": "Receive an invite, and you'll have all you need to get going.",
       "image": "",
       "isDesktopOnly": false
@@ -32,7 +32,7 @@
     {
       "title": "Earn one Yourself",
       "content": "Use your computer to earn Safecoins and create an account",
-      "image": "",
+      "image": "vault_large",
       "isDesktopOnly": true
     }
   ]

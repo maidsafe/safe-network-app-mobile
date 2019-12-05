@@ -5,7 +5,66 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="True"
-             Title="Create an Account">
+             Title="Create an Account"
+             BackgroundColor="White">
     <ContentPage.Content>
+        <StackLayout Padding="16, 25">
+            <CollectionView ItemsSource="{Binding CreateAccountOptions}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     VerticalItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="5"
+                               Padding="15"
+                               HeightRequest="80"
+                               BorderColor="LightGray"
+                               BackgroundColor="#FAFAFA">
+                            <Frame.Triggers>
+                                <DataTrigger TargetType="Frame"
+                                             Binding="{Binding IsDesktopOnly}"
+                                             Value="True">
+                                    <Setter Property="BackgroundColor"
+                                            Value="LightGray" />
+                                </DataTrigger>
+                            </Frame.Triggers>
+                            <StackLayout>
+                                <Label Text="DESKTOP ONLY"
+                                       FontSize="Micro"
+                                       IsVisible="{Binding IsDesktopOnly}" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0"
+                                           Source="{Binding Image}"
+                                           Aspect="AspectFill"
+                                           HeightRequest="60"
+                                           WidthRequest="60" />
+                                    <StackLayout Grid.Column="1"
+                                                 VerticalOptions="Center">
+                                        <Label Text="{Binding Title}"
+                                               FontAttributes="Bold"
+                                               FontSize="Medium" />
+                                        <Label Text="{Binding Content}"
+                                               FontSize="Micro" />
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label HorizontalOptions="Center"
+                   VerticalOptions="EndAndExpand"
+                   TextColor="DarkBlue"
+                   Text="I ALREADY HAVE AN INVITE">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RedeemInviteCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
