@@ -7,10 +7,15 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
+using System;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
 using MobileSnapp.Helpers;
 using MobileSnapp.Models.Onboarding;
+using MobileSnapp.Views.Onboarding;
 using MvvmHelpers;
+using Xamarin.Forms;
 
 namespace MobileSnapp.ViewModels.Onboarding
 {
@@ -23,18 +28,59 @@ namespace MobileSnapp.ViewModels.Onboarding
 
         private const string _staticContentFile = "OnboardingLaunch.json";
 
-        private ObservableCollection<CarouselItem> boardings;
+        private ObservableCollection<CarouselItem> _boardings;
+
+        private INavigation _navigation;
+
+        public ICommand CarouselViewItemTapCommand { get; }
+
+        public ICommand OpenLoginPageCommand { get; }
 
         #endregion
 
         #region Constructor
 
-        public OnBoardingLaunchViewModel()
+        public OnBoardingLaunchViewModel(INavigation navigation)
         {
+            _navigation = navigation;
             OnBoardingLaunchItems = new ObservableCollection<CarouselItem>(
                ContentHelpers.PopulateData<OnboardingLaunch>(
                    _staticContentFile)
                .CarouselItems);
+            CarouselViewItemTapCommand = new Command((object secondaryTitle) => PerformCarouselViewItemTapAction(secondaryTitle));
+            OpenLoginPageCommand = new Command(() => ShowLoginPage());
+        }
+
+        private void ShowLoginPage()
+        {
+            _navigation.PushModalAsync(new NavigationPage(new LoginPage()));
+        }
+
+        private void PerformCarouselViewItemTapAction(object secondaryTitle)
+        {
+            if (secondaryTitle is null)
+                return;
+
+            var tappedItem = OnBoardingLaunchItems.FirstOrDefault(t => t.SecondaryTitle == (secondaryTitle as string));
+            if (tappedItem != null)
+            {
+                ContentPage newActivePage = null;
+                switch (tappedItem.SecondaryTitle)
+                {
+                    case "Explore":
+                        newActivePage = new LoginPage();
+                        break;
+                    case "Get Involved":
+                        newActivePage = new CreateAccountOnboardingPage();
+                        break;
+                    case "Earn Safecoin":
+                        newActivePage = new LoginPage();
+                        break;
+                }
+
+                if (newActivePage != null)
+                    _navigation.PushModalAsync(new NavigationPage(newActivePage));
+            }
         }
 
         #endregion
@@ -46,8 +92,8 @@ namespace MobileSnapp.ViewModels.Onboarding
         /// </summary>
         public ObservableCollection<CarouselItem> OnBoardingLaunchItems
         {
-            get => boardings;
-            set => SetProperty(ref boardings, value);
+            get => _boardings;
+            set => SetProperty(ref _boardings, value);
         }
 
         #endregion

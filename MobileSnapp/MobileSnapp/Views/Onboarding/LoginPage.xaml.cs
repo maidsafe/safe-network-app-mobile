@@ -9,7 +9,7 @@
 
 using Xamarin.Forms;
 
-namespace MobileSnapp.Views.Onboading
+namespace MobileSnapp.Views.Onboarding
 {
     public partial class LoginPage : ContentPage
     {

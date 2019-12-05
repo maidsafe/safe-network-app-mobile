@@ -12,11 +12,11 @@ using Xamarin.Forms;
 
 namespace MobileSnapp.Views.Onboarding
 {
-    public partial class CreateAccountOnboarding : ContentPage
+    public partial class CreateAccountOnboardingPage : ContentPage
     {
         private CreateAccountOnboardingViewModel _viewModel;
 
-        public CreateAccountOnboarding()
+        public CreateAccountOnboardingPage()
         {
             InitializeComponent();
         }

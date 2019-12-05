@@ -4,12 +4,17 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MobileSnapp.Views.Onboading.LoginPage"
+             x:Class="MobileSnapp.Views.Onboarding.LoginPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.PrefersHomeIndicatorAutoHidden="true"
+             ios:Page.UseSafeArea="True"
+             NavigationPage.HasBackButton="True"
              Visual="Material"
              Padding="15, 30"
              Title="Log In">
     <ContentPage.Content>
-        <StackLayout Spacing="20">
+        <StackLayout Spacing="25"
+                     Padding="8">
             <Entry Placeholder="Password" />
             <Entry Placeholder="Passphrase" />
             <Button Text="LOG IN"
@@ -17,13 +22,16 @@
                     HeightRequest="40" />
 
             <StackLayout Orientation="Horizontal">
-                <Label Text="Keep me logged in" />
+                <Label Text="Keep me logged in"
+                       Margin="0, 10"/>
                 <Switch HorizontalOptions="EndAndExpand" />
             </StackLayout>
 
             <Label HorizontalOptions="Center"
                    VerticalOptions="EndAndExpand"
-                   Text="CREATE AN ACCOUNT" />
+                   TextColor="DarkBlue"
+                   Text="CREATE AN ACCOUNT"
+                   Margin="0, 0, 0, 10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
