@@ -27,7 +27,7 @@ namespace MobileSnapp.Views.Onboarding
 
             if (_viewModel == null)
             {
-                _viewModel = new CreateAccountOnboardingViewModel();
+                _viewModel = new CreateAccountOnboardingViewModel(Navigation);
                 BindingContext = _viewModel;
             }
         }

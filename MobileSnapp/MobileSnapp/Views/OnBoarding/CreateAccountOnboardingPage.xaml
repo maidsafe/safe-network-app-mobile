@@ -11,7 +11,8 @@
              xmlns:controls="clr-namespace:MobileSnapp.Controls"
              Visual="Material"
              BackgroundColor="White"
-             x:Class="MobileSnapp.Views.Onboarding.CreateAccountOnboardingPage">
+             x:Class="MobileSnapp.Views.Onboarding.CreateAccountOnboardingPage"
+             Title="Create an Account">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -21,32 +22,15 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="FillAndExpand"
-                     VerticalOptions="FillAndExpand"
-                     Margin="0"
-                     Padding="0"
-                     BackgroundColor="White">
-            <Label FontFamily="{StaticResource Material}"
-                   Text="{x:Static icons:IconFont.Close}"
-                   Style="{StaticResource PrimaryLightTextColor}"
-                   FontSize="Medium"
-                   HorizontalOptions="Start" />
-            <Label Text="SAFE NETWORK"
-                   HorizontalOptions="CenterAndExpand"
-                   Style="{StaticResource PrimaryDarkLabelStyle}"
-                   FontSize="Medium" />
-        </StackLayout>
-    </NavigationPage.TitleView>
-
     <ContentPage.Content>
         <StackLayout>
             <CarouselView ItemsSource="{Binding OnBordingOptions}"
                           HorizontalOptions="Center"
                           VerticalOptions="CenterAndExpand"
+                          Position="{Binding CarouselViewCurrentPosition}"
                           VerticalScrollBarVisibility="Never"
-                          HorizontalScrollBarVisibility="Never">
+                          HorizontalScrollBarVisibility="Never"
+                          x:Name="LaunchPageCarouselView">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Vertical"
@@ -91,7 +75,6 @@
                                         Style="{StaticResource SecondaryDarkLabelStyle}"
                                         HorizontalOptions="CenterAndExpand" />
                             </StackLayout>
-
                         </StackLayout>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
@@ -113,27 +96,27 @@
                 <Label Text="BACK"
                        TextColor="{StaticResource PrimaryColor}"
                        VerticalOptions="Center"
-                       HorizontalOptions="Start">
+                       HorizontalOptions="StartAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BackCommand}" />
+                    </Label.GestureRecognizers>
                 </Label>
                 <Label Text="NEXT"
                        TextColor="{StaticResource PrimaryColor}"
                        VerticalOptions="Center"
-                       HorizontalOptions="EndAndExpand">
+                       HorizontalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NextCommand}" />
+                    </Label.GestureRecognizers>
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label"
+                                     Binding="{Binding Source={x:Reference LaunchPageCarouselView}, Path=Position}"
+                                     Value="2">
+                            <Setter Property="Text" Value="Get Started" />
+                            <Setter Property="TextColor" Value="DarkOrange" />
+                        </DataTrigger>
+                    </Label.Triggers>
                 </Label>
-                <!--<Button Text="Back"
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        BorderWidth="0"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        TextColor="{StaticResource PrimaryColor}"/>
-                <Button Text="Next"
-                        BackgroundColor="Transparent"
-                        BorderColor="Transparent"
-                        BorderWidth="0"
-                        HorizontalOptions="EndAndExpand"
-                        VerticalOptions="Center"
-                        TextColor="{StaticResource PrimaryColor}"/>-->
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
