@@ -4,11 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.PrefersHomeIndicatorAutoHidden="true"
+             ios:Page.UseSafeArea="True"
              xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:controls="clr-namespace:MobileSnapp.Controls"
              Visual="Material"
              BackgroundColor="White"
-             x:Class="MobileSnapp.Views.Onboarding.CreateAccountOnboarding">
+             x:Class="MobileSnapp.Views.Onboarding.CreateAccountOnboardingPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>

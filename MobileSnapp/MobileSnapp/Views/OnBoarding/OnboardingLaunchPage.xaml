@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:customViews="clr-namespace:MobileSnapp.Views.CustomViews"
+             xmlns:vm="clr-namespace:MobileSnapp.ViewModels.Onboarding"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="True"
@@ -102,6 +103,11 @@
                                            Style="{StaticResource SecondaryDarkLabelStyle}" />
                                 </StackLayout>
                             </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type vm:OnBoardingLaunchViewModel}}, Path=CarouselViewItemTapCommand}"
+                                                      CommandParameter="{Binding SecondaryTitle}" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
@@ -140,8 +146,8 @@
                         Text="LOG IN"
                         BackgroundColor="{StaticResource SecondaryColor}"
                         Padding="0"
-                        TextColor="White"
-                        x:Name="LoginButton">
+                        Command="{Binding OpenLoginPageCommand}"
+                        TextColor="White">
                     <Button.HeightRequest>
                         <OnPlatform x:TypeArguments="x:Double">
                             <On Platform="Android">35</On>
