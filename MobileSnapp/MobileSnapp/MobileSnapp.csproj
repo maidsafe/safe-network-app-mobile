@@ -53,5 +53,7 @@
 
   <ItemGroup>
     <Folder Include="Views\TemplateSelectors\" />
+    <Folder Include="Views\Common\" />
+    <Folder Include="ViewModels\Common\" />
   </ItemGroup>
 </Project>
