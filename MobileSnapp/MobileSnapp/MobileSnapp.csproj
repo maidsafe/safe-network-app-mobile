@@ -51,4 +51,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\TemplateSelectors\" />
+  </ItemGroup>
 </Project>

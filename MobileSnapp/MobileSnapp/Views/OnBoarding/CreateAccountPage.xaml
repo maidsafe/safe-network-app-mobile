@@ -4,11 +4,98 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:TemplateSelector="clr-namespace:MobileSnapp.Views.TemplateSelectors"
              x:Class="MobileSnapp.Views.Onboarding.CreateAccountPage"
              Title="Create an Account">
-    <ContentPage.Content>
-        <StackLayout>
+    <ContentPage.Resources>
+        <DataTemplate x:Key="EnterInviteTemplate">
+            <StackLayout Spacing="10">
+                <Label Text="STEP 1 OF 3"
+                       FontSize="Small" />
+                <Label Text="Enter Invite"
+                       TextColor="Black"
+                       FontSize="Large"
+                       Margin="0, 20, 0, 0"/>
+                <Label Text="Paste the link, or scan a QR code to get started."
+                       FontSize="Medium" />
+                <Entry Placeholder="Invite Link"
+                       Margin="0, 50, 0, 0"/>
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="EndAndExpand">
+                    <Button BackgroundColor="Transparent"
+                            Text="BACK"
+                            TextColor="DarkBlue" />
+                    <Button BackgroundColor="DarkBlue"
+                            Text="NEXT"
+                            TextColor="White"
+                            WidthRequest="150"
+                            CornerRadius="25" />
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
 
+        <DataTemplate x:Key="ChoosePasswordTemplate">
+            <StackLayout Spacing="10">
+                <Label Text="STEP 2 OF 3"
+                       FontSize="Small" />
+                <Label Text="Choose a Password"
+                       TextColor="Black"
+                       FontSize="Large"
+                       Margin="0, 20, 0, 0"/>
+                <Label Text="Make sure you keep it safe because it can't be reset or recovered."
+                       FontSize="Medium" />
+                <Entry Placeholder="Password"
+                       Margin="0, 50, 0, 0"/>
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="EndAndExpand">
+                    <Button BackgroundColor="Transparent"
+                            Text="BACK"
+                            TextColor="DarkBlue" />
+                    <Button BackgroundColor="DarkBlue"
+                            Text="SAVE Password"
+                            TextColor="White"
+                            WidthRequest="150"
+                            CornerRadius="25" />
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ChoosePassPhaseTemplate">
+            <StackLayout Spacing="10">
+                <Label Text="STEP 3 OF 3"
+                       FontSize="Small" />
+                <Label Text="Choose a PassPhase"
+                       TextColor="Black"
+                       FontSize="Large"
+                       Margin="0, 20, 0, 0"/>
+                <Label Text="It's like a second password that you'll use to log in.\nMkw it unique and memorable, and keep it safe."
+                       FontSize="Medium" />
+                <Entry Placeholder="SAVE PASSPHRASE"
+                       Margin="0, 50, 0, 0"/>
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="EndAndExpand">
+                    <Button BackgroundColor="Transparent"
+                            Text="BACK"
+                            TextColor="DarkBlue" />
+                    <Button BackgroundColor="DarkBlue"
+                            Text="NEXT"
+                            TextColor="White"
+                            WidthRequest="150"
+                            CornerRadius="25" />
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+
+        <TemplateSelector:CreateAccountWizardTemplateSelector x:Key="WizardStepSelector"
+                                                              EnterInviteTemplate="{StaticResource EnterInviteTemplate}"
+                                                              ChoosePasswordTemplate="{StaticResource ChoosePasswordTemplate}"
+                                                              ChoosePassPhaseTemplate="{StaticResource ChoosePassPhaseTemplate}" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="20" Visual="Material">
+            <CarouselView ItemsSource="{Binding AccountCreationWizardSteps}"
+                          ItemTemplate="{StaticResource WizardStepSelector}">
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

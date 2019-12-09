@@ -7,11 +7,18 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-﻿using MvvmHelpers;
+using System.Collections.Generic;
+using MvvmHelpers;
 
-﻿namespace MobileSnapp.ViewModels.Onboarding
+namespace MobileSnapp.ViewModels.Onboarding
 {
     public class CreateAccountViewModel : BaseViewModel
     {
+        public List<string> AccountCreationWizardSteps { get; } = new List<string>
+        {
+            "Invite",
+            "Password",
+            "PassPhase"
+        };
     }
 }
