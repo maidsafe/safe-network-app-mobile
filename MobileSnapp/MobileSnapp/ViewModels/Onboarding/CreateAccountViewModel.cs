@@ -8,17 +8,53 @@
 // Software.
 
 using System.Collections.Generic;
+using System.Windows.Input;
+using MobileSnapp.Views.Onboarding;
 using MvvmHelpers;
+using Xamarin.Forms;
 
 namespace MobileSnapp.ViewModels.Onboarding
 {
     public class CreateAccountViewModel : BaseViewModel
     {
+        private INavigation _navigation;
+
         public List<string> AccountCreationWizardSteps { get; } = new List<string>
         {
             "Invite",
             "Password",
-            "PassPhase"
+            "PassPhrase"
         };
+
+        private int _createAccountWizardCurrentStep;
+
+        public int CreateAccountWizardCurrentStep
+        {
+            get => _createAccountWizardCurrentStep;
+            set => SetProperty(ref _createAccountWizardCurrentStep, value);
+        }
+
+        public ICommand NextOrCreateAccountCommand { get; }
+
+        public ICommand BackCommand { get; }
+
+        public CreateAccountViewModel(INavigation navigation)
+        {
+            _navigation = navigation;
+
+            BackCommand = new Command(
+                () => CreateAccountWizardCurrentStep -= 1,
+                () => CreateAccountWizardCurrentStep > 0);
+
+            NextOrCreateAccountCommand = new Command(
+                () =>
+                {
+                    if (CreateAccountWizardCurrentStep == 2)
+                        _navigation.PushAsync(new AccountCreatedSuccessFully());
+                    else
+                        CreateAccountWizardCurrentStep += 1;
+                },
+                () => CreateAccountWizardCurrentStep <= 2);
+        }
     }
 }

@@ -7,7 +7,6 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="True"
-             xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:controls="clr-namespace:MobileSnapp.Controls"
              Visual="Material"
              BackgroundColor="White"

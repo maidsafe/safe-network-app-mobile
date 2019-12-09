@@ -42,5 +42,6 @@
         public const string ContentCopy = "\uf18f";
         public const string Lock = "\uf33e";
         public const string Download = "\uf1da";
+        public const string CheckCircleOutline = "\uf5e1";
     }
 }

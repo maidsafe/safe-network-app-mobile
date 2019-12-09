@@ -6,13 +6,15 @@
              mc:Ignorable="d"
              x:Class="MobileSnapp.App">
     <Application.Resources>
-        <OnPlatform x:Key="Material"
+
+        <OnPlatform x:Key="MaterialFontFamily"
                     x:TypeArguments="x:String">
             <On Platform="iOS"
                 Value="Material Design Icons" />
             <On Platform="Android"
                 Value="materialdesignicons-webfont.ttf#Material Design Icons" />
         </OnPlatform>
+
         <Color x:Key="PrimaryColor">#303F9F</Color>
         <Color x:Key="SecondaryColor">#FF5722</Color>
         <Color x:Key="PrimaryDarkTextColor">#000000</Color>

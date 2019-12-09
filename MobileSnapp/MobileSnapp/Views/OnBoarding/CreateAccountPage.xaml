@@ -5,11 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:TemplateSelector="clr-namespace:MobileSnapp.Views.TemplateSelectors"
+             xmlns:vm="clr-namespace:MobileSnapp.ViewModels.Onboarding"
              x:Class="MobileSnapp.Views.Onboarding.CreateAccountPage"
              Title="Create an Account">
     <ContentPage.Resources>
         <DataTemplate x:Key="EnterInviteTemplate">
-            <StackLayout Spacing="10">
+            <StackLayout Spacing="10"
+                         Visual="Material"
+                         Padding="20, 30">
                 <Label Text="STEP 1 OF 3"
                        FontSize="Small" />
                 <Label Text="Enter Invite"
@@ -21,21 +24,29 @@
                 <Entry Placeholder="Invite Link"
                        Margin="0, 50, 0, 0"/>
                 <StackLayout Orientation="Horizontal"
-                             HorizontalOptions="EndAndExpand">
-                    <Button BackgroundColor="Transparent"
-                            Text="BACK"
-                            TextColor="DarkBlue" />
+                             HorizontalOptions="EndAndExpand"
+                             Margin="0, 10, 0, 0"
+                             Spacing="20">
+                    <Label Text="BACK"
+                           TextColor="DarkBlue"
+                           VerticalOptions="Center"
+                           WidthRequest="60"
+                           FontSize="16" />
                     <Button BackgroundColor="DarkBlue"
                             Text="NEXT"
+                            FontSize="16"
                             TextColor="White"
-                            WidthRequest="150"
-                            CornerRadius="25" />
+                            WidthRequest="200"
+                            CornerRadius="25"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=NextOrCreateAccountCommand}" />
                 </StackLayout>
             </StackLayout>
         </DataTemplate>
 
         <DataTemplate x:Key="ChoosePasswordTemplate">
-            <StackLayout Spacing="10">
+            <StackLayout Spacing="10"
+                         Visual="Material"
+                         Padding="20, 30">
                 <Label Text="STEP 2 OF 3"
                        FontSize="Small" />
                 <Label Text="Choose a Password"
@@ -45,23 +56,32 @@
                 <Label Text="Make sure you keep it safe because it can't be reset or recovered."
                        FontSize="Medium" />
                 <Entry Placeholder="Password"
+                       IsPassword="True"
                        Margin="0, 50, 0, 0"/>
                 <StackLayout Orientation="Horizontal"
-                             HorizontalOptions="EndAndExpand">
-                    <Button BackgroundColor="Transparent"
-                            Text="BACK"
-                            TextColor="DarkBlue" />
+                             HorizontalOptions="EndAndExpand"
+                             Margin="0, 10, 0, 0"
+                             Spacing="20">
+                    <Label Text="BACK"
+                           TextColor="DarkBlue"
+                           VerticalOptions="Center"
+                           WidthRequest="60"
+                           FontSize="16" />
                     <Button BackgroundColor="DarkBlue"
-                            Text="SAVE Password"
+                            Text="SAVE PASSWORD"
+                            FontSize="16"
                             TextColor="White"
-                            WidthRequest="150"
-                            CornerRadius="25" />
+                            WidthRequest="200"
+                            CornerRadius="25"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=NextOrCreateAccountCommand}" />
                 </StackLayout>
             </StackLayout>
         </DataTemplate>
 
-        <DataTemplate x:Key="ChoosePassPhaseTemplate">
-            <StackLayout Spacing="10">
+        <DataTemplate x:Key="ChoosePassPhraseTemplate">
+            <StackLayout Spacing="10"
+                         Visual="Material"
+                         Padding="20, 30">
                 <Label Text="STEP 3 OF 3"
                        FontSize="Small" />
                 <Label Text="Choose a PassPhase"
@@ -71,17 +91,28 @@
                 <Label Text="It's like a second password that you'll use to log in.\nMkw it unique and memorable, and keep it safe."
                        FontSize="Medium" />
                 <Entry Placeholder="SAVE PASSPHRASE"
+                       IsPassword="True"
                        Margin="0, 50, 0, 0"/>
                 <StackLayout Orientation="Horizontal"
-                             HorizontalOptions="EndAndExpand">
-                    <Button BackgroundColor="Transparent"
-                            Text="BACK"
-                            TextColor="DarkBlue" />
+                             HorizontalOptions="EndAndExpand"
+                             Margin="0, 10, 0, 0"
+                             Spacing="20">
+                    <Label Text="BACK"
+                           TextColor="DarkBlue"
+                           VerticalOptions="Center"
+                           WidthRequest="60"
+                           FontSize="16">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=BackCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     <Button BackgroundColor="DarkBlue"
-                            Text="NEXT"
+                            Text="SAVE PASSPHRASE"
                             TextColor="White"
-                            WidthRequest="150"
-                            CornerRadius="25" />
+                            FontSize="16"
+                            WidthRequest="200"
+                            CornerRadius="25"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=NextOrCreateAccountCommand}" />
                 </StackLayout>
             </StackLayout>
         </DataTemplate>
@@ -89,12 +120,13 @@
         <TemplateSelector:CreateAccountWizardTemplateSelector x:Key="WizardStepSelector"
                                                               EnterInviteTemplate="{StaticResource EnterInviteTemplate}"
                                                               ChoosePasswordTemplate="{StaticResource ChoosePasswordTemplate}"
-                                                              ChoosePassPhaseTemplate="{StaticResource ChoosePassPhaseTemplate}" />
+                                                              ChoosePassPhraseTemplate="{StaticResource ChoosePassPhraseTemplate}" />
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Padding="20" Visual="Material">
+        <StackLayout Visual="Material">
             <CarouselView ItemsSource="{Binding AccountCreationWizardSteps}"
-                          ItemTemplate="{StaticResource WizardStepSelector}">
+                          ItemTemplate="{StaticResource WizardStepSelector}"
+                          Position="{Binding CreateAccountWizardCurrentStep}">
             </CarouselView>
         </StackLayout>
     </ContentPage.Content>

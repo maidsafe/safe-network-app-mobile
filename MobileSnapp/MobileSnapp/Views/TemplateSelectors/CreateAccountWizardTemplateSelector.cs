@@ -9,7 +9,7 @@ namespace MobileSnapp.Views.TemplateSelectors
 
         public DataTemplate ChoosePasswordTemplate { get; set; }
 
-        public DataTemplate ChoosePassPhaseTemplate { get; set; }
+        public DataTemplate ChoosePassPhraseTemplate { get; set; }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
@@ -19,8 +19,8 @@ namespace MobileSnapp.Views.TemplateSelectors
                     return EnterInviteTemplate;
                 case "Password":
                     return ChoosePasswordTemplate;
-                case "PassPhase":
-                    return ChoosePassPhaseTemplate;
+                case "PassPhrase":
+                    return ChoosePassPhraseTemplate;
             }
 
             return EnterInviteTemplate;
