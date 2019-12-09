@@ -68,7 +68,7 @@ namespace MobileSnapp.ViewModels.Onboarding
                 switch (tappedItem.SecondaryTitle)
                 {
                     case "Explore":
-                        newActivePage = new LoginPage();
+                        newActivePage = new AppDetailsPage();
                         break;
                     case "Get Involved":
                         newActivePage = new CreateAccountOnboardingPage();

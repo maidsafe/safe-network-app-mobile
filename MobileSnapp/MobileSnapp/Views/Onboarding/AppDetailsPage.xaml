@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileSnapp.Views.Onboarding.AppDetailsPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <StackLayout VerticalOptions="FillAndExpand"
+                             BackgroundColor="WhiteSmoke"
+                             Orientation="Horizontal"
+                             Spacing="20"
+                             Padding="20">
+                        <StackLayout VerticalOptions="CenterAndExpand"
+                                     HorizontalOptions="StartAndExpand">
+                            <Label Text="SAFE Browser"
+                                   FontSize="Large"
+                                   FontAttributes="Bold"
+                                   TextColor="Black" />
+
+                            <Label Text="MaidSafe.net Ltd."
+                                   FontSize="Medium"
+                                   TextColor="DarkSlateGray" />
+
+                            <Label Text="Browser and explore the SAFE Network.&#10;No account required."
+                                   TextColor="DarkSlateGray"
+                                   Margin="0, 20, 0, 0"
+                                   FontSize="14" />
+                        </StackLayout>
+                    <Image Source="browser"
+                           HeightRequest="80"
+                           WidthRequest="80"
+                           VerticalOptions="Center"
+                           HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout Grid.Row="1"
+                             Padding="20"
+                             Spacing="20"
+                             VerticalOptions="FillAndExpand" >
+                    <Label Text="What it's for"
+                           FontSize="Medium"
+                           TextColor="Black" />
+
+                    <Label TextColor="DarkSlateGray">
+                        <Label.Text>
+                            The SAFE Browser allows you to browser, explore, read and download from the the SAFE Network, whether you have an Account or not.&#10;&#10;It’s always free to access the Network, and you can do so in  privacy: all information going to and from the Network is encrypted.&#10;&#10;Download it from the App Centre and try it for yourself. 
+                        </Label.Text>
+                    </Label>
+
+                    <Button Text="GET BROWSER"
+                            BackgroundColor="DarkBlue"
+                            TextColor="White"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="EndAndExpand"
+                            CornerRadius="20"
+                            WidthRequest="150" />
+                </StackLayout>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>
