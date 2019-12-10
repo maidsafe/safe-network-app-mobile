@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:customViews="clr-namespace:MobileSnapp.Views.CustomViews"
+             xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:vm="clr-namespace:MobileSnapp.ViewModels.Onboarding"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
@@ -28,7 +29,37 @@
         <StackLayout Spacing="0"
                      Orientation="Vertical"
                      BackgroundColor="{StaticResource PrimaryColor}">
-            <Label Text="Getting Started"
+
+            <!--Browser launch header-->
+            <Label Text="BROWSE SAFE"
+                   Style="{StaticResource PrimaryLightLabelStyle}"
+                   VerticalOptions="EndAndExpand"
+                   Margin="20, 0"
+                   IsVisible="{Binding IsBrowserInstalled}" />
+            <StackLayout BackgroundColor="DarkSlateBlue"
+                         Orientation="Horizontal"
+                         Padding="20, 10"
+                         Margin="0, 10"
+                         Spacing="15"
+                         IsVisible="{Binding IsBrowserInstalled}">
+                <Image Source="browser"
+                       VerticalOptions="Center"
+                       HeightRequest="40"
+                       WidthRequest="40" />
+                <Label Text="SAFE Browser"
+                       FontSize="Medium"
+                       TextColor="White"
+                       VerticalOptions="Center" />
+                <Label FontFamily="{StaticResource MaterialFontFamily}"
+                       TextColor="DarkGray"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalOptions="Center"
+                       FontSize="Large"
+                       Text="{x:Static icons:IconFont.Launch}" />
+            </StackLayout>
+
+            <!--App launch options-->
+            <Label Text="GETTING STARTED"
                    Style="{StaticResource PrimaryLightLabelStyle}"
                    VerticalOptions="EndAndExpand"
                    Margin="20, 0" />
@@ -112,6 +143,8 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
+
+            <!--Login sheet-->
             <StackLayout Orientation="Vertical"
                          VerticalOptions="EndAndExpand"
                          HorizontalOptions="FillAndExpand"

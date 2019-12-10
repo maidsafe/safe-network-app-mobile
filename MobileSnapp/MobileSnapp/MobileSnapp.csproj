@@ -55,5 +55,7 @@
     <Folder Include="Views\TemplateSelectors\" />
     <Folder Include="Views\Common\" />
     <Folder Include="ViewModels\Common\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Abstractions\" />
   </ItemGroup>
 </Project>
