@@ -16,7 +16,7 @@ using Xamarin.Forms;
 namespace MobileSnapp.Droid
 {
     [Activity(
-        Label = "MobileSnapp",
+        Label = "SAFE Network App",
         Icon = "@mipmap/icon",
         Theme = "@style/MainTheme",
         MainLauncher = true,
