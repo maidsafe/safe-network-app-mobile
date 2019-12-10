@@ -43,7 +43,8 @@
                             FontSize="16"
                             TextColor="White"
                             WidthRequest="200"
-                            CornerRadius="25"
+                            HeightRequest="40"
+                            CornerRadius="20"
                             Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=NextOrCreateAccountCommand}" />
                 </StackLayout>
             </StackLayout>
@@ -82,7 +83,8 @@
                             FontSize="16"
                             TextColor="White"
                             WidthRequest="200"
-                            CornerRadius="25"
+                            HeightRequest="40"
+                            CornerRadius="20"
                             Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=NextOrCreateAccountCommand}" />
                 </StackLayout>
             </StackLayout>
@@ -121,7 +123,8 @@
                             TextColor="White"
                             FontSize="16"
                             WidthRequest="200"
-                            CornerRadius="25"
+                            HeightRequest="40"
+                            CornerRadius="20"
                             Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=NextOrCreateAccountCommand}" />
                 </StackLayout>
             </StackLayout>
