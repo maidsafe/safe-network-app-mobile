@@ -7,6 +7,7 @@
              ios:Page.UseSafeArea="True"
              Title="Create an Account"
              BackgroundColor="White">
+
     <ContentPage.Content>
         <StackLayout Padding="16, 25">
             <CollectionView ItemsSource="{Binding CreateAccountOptions}">
@@ -20,7 +21,8 @@
                                Padding="15"
                                HeightRequest="80"
                                BorderColor="LightGray"
-                               BackgroundColor="#FAFAFA">
+                               BackgroundColor="#FAFAFA"
+                               HasShadow="False">
                             <Frame.Triggers>
                                 <DataTrigger TargetType="Frame"
                                              Binding="{Binding IsDesktopOnly}"
