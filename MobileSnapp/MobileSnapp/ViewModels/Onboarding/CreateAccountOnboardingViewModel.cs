@@ -40,9 +40,17 @@ namespace MobileSnapp.ViewModels.Onboarding
                 ContentHelpers.PopulateData<CreateAccountOnboardingStaticContent>(
                     _staticContentFile)
                 .CreateAccountOnboarding);
+
             BackCommand = new Command(
-                () => CarouselViewCurrentPosition -= 1,
-                () => CarouselViewCurrentPosition > 0);
+                () =>
+                {
+                    if (CarouselViewCurrentPosition == 0)
+                        _navigation.PopModalAsync();
+                    else
+                        CarouselViewCurrentPosition -= 1;
+                },
+                () => CarouselViewCurrentPosition >= 0);
+
             NextCommand = new Command(
                 () =>
                 {
@@ -52,16 +60,8 @@ namespace MobileSnapp.ViewModels.Onboarding
                         CarouselViewCurrentPosition += 1;
                 },
                 () => CarouselViewCurrentPosition <= 2);
-        }
 
-        private void ShowNextItem(object arg)
-        {
-            --CarouselViewCurrentPosition;
-        }
-
-        private void ShowPreviousItem(object arg)
-        {
-            ++CarouselViewCurrentPosition;
+            ModalPopUpCommand = new Command(() => _navigation.PopModalAsync());
         }
 
         #endregion
@@ -71,12 +71,14 @@ namespace MobileSnapp.ViewModels.Onboarding
         /// <summary>
         /// Gets or sets the command that is executed when the Back button is clicked.
         /// </summary>
-        public ICommand BackCommand { get; set; }
+        public ICommand BackCommand { get; }
 
         /// <summary>
         /// Gets or sets the command that is executed when the Done button is clicked.
         /// </summary>
-        public ICommand NextCommand { get; set; }
+        public ICommand NextCommand { get; }
+
+        public ICommand ModalPopUpCommand { get; }
 
         #endregion
 

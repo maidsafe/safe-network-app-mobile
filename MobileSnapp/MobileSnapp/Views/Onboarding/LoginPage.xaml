@@ -13,6 +13,7 @@
              Visual="Material"
              Padding="15, 30"
              Title="Log In">
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Back"
                      Command="{Binding BackCommand}"
@@ -23,6 +24,7 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout Spacing="25"
                      Padding="8">

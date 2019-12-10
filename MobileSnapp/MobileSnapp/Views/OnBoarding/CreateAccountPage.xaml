@@ -4,10 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:TemplateSelector="clr-namespace:MobileSnapp.Views.TemplateSelectors"
              xmlns:vm="clr-namespace:MobileSnapp.ViewModels.Onboarding"
              x:Class="MobileSnapp.Views.Onboarding.CreateAccountPage"
              Title="Create an Account">
+
     <ContentPage.Resources>
         <DataTemplate x:Key="EnterInviteTemplate">
             <StackLayout Spacing="10"
@@ -31,7 +33,11 @@
                            TextColor="DarkBlue"
                            VerticalOptions="Center"
                            WidthRequest="60"
-                           FontSize="16" />
+                           FontSize="16">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=BackCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     <Button BackgroundColor="DarkBlue"
                             Text="NEXT"
                             FontSize="16"
@@ -66,7 +72,11 @@
                            TextColor="DarkBlue"
                            VerticalOptions="Center"
                            WidthRequest="60"
-                           FontSize="16" />
+                           FontSize="16">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CreateAccountViewModel}}, Path=BackCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     <Button BackgroundColor="DarkBlue"
                             Text="SAVE PASSWORD"
                             FontSize="16"
@@ -122,6 +132,18 @@
                                                               ChoosePasswordTemplate="{StaticResource ChoosePasswordTemplate}"
                                                               ChoosePassPhraseTemplate="{StaticResource ChoosePassPhraseTemplate}" />
     </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back"
+                     Command="{Binding ModelPopUpCommand}"
+                     Order="Primary">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="{x:Static icons:IconFont.Close}"
+                                 FontFamily="{StaticResource MaterialFontFamily}"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout Visual="Material">
             <CarouselView ItemsSource="{Binding AccountCreationWizardSteps}"

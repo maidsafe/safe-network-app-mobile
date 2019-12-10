@@ -38,6 +38,8 @@ namespace MobileSnapp.ViewModels.Onboarding
 
         public ICommand BackCommand { get; }
 
+        public ICommand ModelPopUpCommand { get; }
+
         public CreateAccountViewModel(INavigation navigation)
         {
             _navigation = navigation;
@@ -55,6 +57,8 @@ namespace MobileSnapp.ViewModels.Onboarding
                         CreateAccountWizardCurrentStep += 1;
                 },
                 () => CreateAccountWizardCurrentStep <= 2);
+
+            ModelPopUpCommand = new Command(() => _navigation.PopModalAsync());
         }
     }
 }

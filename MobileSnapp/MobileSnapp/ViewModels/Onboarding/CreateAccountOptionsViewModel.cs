@@ -32,8 +32,11 @@ namespace MobileSnapp.ViewModels.Onboarding
                 ContentHelpers.PopulateData<CreateAccountOnboardingStaticContent>(
                     _staticContentFile)
                 .CreateAccountOptionList);
-            RedeemInviteCommand =
-                new Command(() => _navigation.PushModalAsync(new NavigationPage(new CreateAccountPage())));
+            RedeemInviteCommand = new Command(() =>
+            {
+                _navigation.PopModalAsync();
+                _navigation.PushModalAsync(new NavigationPage(new CreateAccountPage()));
+            });
         }
 
         public ObservableCollection<CreateAccountOnboardingItemWithDesktopOption> CreateAccountOptions
