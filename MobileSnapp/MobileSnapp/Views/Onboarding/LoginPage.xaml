@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MobileSnapp.Views.Onboarding.LoginPage"
+             xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="True"
@@ -12,6 +13,16 @@
              Visual="Material"
              Padding="15, 30"
              Title="Log In">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back"
+                     Command="{Binding BackCommand}"
+                     Order="Primary">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="{x:Static icons:IconFont.Close}"
+                                 FontFamily="{StaticResource MaterialFontFamily}"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="25"
                      Padding="8">
@@ -31,7 +42,11 @@
                    VerticalOptions="EndAndExpand"
                    TextColor="DarkBlue"
                    Text="CREATE AN ACCOUNT"
-                   Margin="0, 0, 0, 10"/>
+                   Margin="0, 0, 0, 10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CreateAccountCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
