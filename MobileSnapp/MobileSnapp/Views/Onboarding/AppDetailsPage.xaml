@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileSnapp.Views.Onboarding.AppDetailsPage"
+             xmlns:icons="clr-namespace:MobileSnapp.Models"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
             <Grid VerticalOptions="FillAndExpand">
@@ -9,33 +10,49 @@
                     <RowDefinition Height="2*" />
                     <RowDefinition Height="3*" />
                 </Grid.RowDefinitions>
+                
                 <StackLayout VerticalOptions="FillAndExpand"
                              BackgroundColor="WhiteSmoke"
                              Orientation="Horizontal"
                              Spacing="20"
                              Padding="20">
-                        <StackLayout VerticalOptions="CenterAndExpand"
-                                     HorizontalOptions="StartAndExpand">
-                            <Label Text="SAFE Browser"
-                                   FontSize="Large"
-                                   FontAttributes="Bold"
-                                   TextColor="Black" />
+                    <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="StartAndExpand">
+                        <Label Text="SAFE Browser"
+                                FontSize="Large"
+                                FontAttributes="Bold"
+                                TextColor="Black" />
 
-                            <Label Text="MaidSafe.net Ltd."
-                                   FontSize="Medium"
-                                   TextColor="DarkSlateGray" />
+                        <Label Text="MaidSafe.net Ltd."
+                                FontSize="Medium"
+                                TextColor="DarkSlateGray" />
 
-                            <Label Text="Browser and explore the SAFE Network.&#10;No account required."
-                                   TextColor="DarkSlateGray"
-                                   Margin="0, 20, 0, 0"
-                                   FontSize="14" />
-                        </StackLayout>
+                        <Label Text="Browser and explore the SAFE Network.&#10;No account required."
+                                TextColor="DarkSlateGray"
+                                Margin="0, 20, 0, 0"
+                                FontSize="14" />
+                    </StackLayout>
                     <Image Source="browser"
                            HeightRequest="80"
                            WidthRequest="80"
                            VerticalOptions="Center"
                            HorizontalOptions="EndAndExpand" />
                 </StackLayout>
+                <Image HeightRequest="30"
+                       WidthRequest="30"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"
+                       Margin="20">
+                    <Image.Source>
+                        <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}"
+                                         Glyph="{x:Static icons:IconFont.ArrowLeft}"
+                                         Size="30"
+                                         Color="DarkSlateGray" />
+                    </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BackCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
                 <StackLayout Grid.Row="1"
                              Padding="20"
                              Spacing="20"
