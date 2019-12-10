@@ -7,15 +7,29 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
+using MobileSnapp.ViewModels.Onboarding;
 using Xamarin.Forms;
 
 namespace MobileSnapp.Views.Onboarding
 {
     public partial class LoginPage : ContentPage
     {
+        private LoginViewModel _viewModel;
+
         public LoginPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (_viewModel == null)
+            {
+                _viewModel = new LoginViewModel(Navigation);
+                BindingContext = _viewModel;
+            }
         }
     }
 }
