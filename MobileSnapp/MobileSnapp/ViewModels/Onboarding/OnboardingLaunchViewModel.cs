@@ -7,14 +7,13 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using MobileSnapp.Helpers;
 using MobileSnapp.Models.Onboarding;
+using MobileSnapp.ViewModels.Common;
 using MobileSnapp.Views.Onboarding;
-using MvvmHelpers;
 using Xamarin.Forms;
 
 namespace MobileSnapp.ViewModels.Onboarding
@@ -43,12 +42,19 @@ namespace MobileSnapp.ViewModels.Onboarding
         public OnBoardingLaunchViewModel(INavigation navigation)
         {
             _navigation = navigation;
+
             OnBoardingLaunchItems = new ObservableCollection<CarouselItem>(
                ContentHelpers.PopulateData<OnboardingLaunch>(
                    _staticContentFile)
                .CarouselItems);
+
             CarouselViewItemTapCommand = new Command((object secondaryTitle) => PerformCarouselViewItemTapAction(secondaryTitle));
             OpenLoginPageCommand = new Command(() => ShowLoginPage());
+
+            // Check is the browser is install
+            var canOpenTestUrl = PlatformService.CanOpenAnAppUsingUrl("safe://testapp.net");
+            if (canOpenTestUrl)
+                IsBrowserInstalled = true;
         }
 
         private void ShowLoginPage()
@@ -94,6 +100,14 @@ namespace MobileSnapp.ViewModels.Onboarding
         {
             get => _boardings;
             set => SetProperty(ref _boardings, value);
+        }
+
+        private bool _isBrowserInstalled;
+
+        public bool IsBrowserInstalled
+        {
+            get => _isBrowserInstalled;
+            set => SetProperty(ref _isBrowserInstalled, value);
         }
 
         #endregion

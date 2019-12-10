@@ -43,5 +43,6 @@
         public const string Lock = "\uf33e";
         public const string Download = "\uf1da";
         public const string CheckCircleOutline = "\uf5e1";
+        public const string Launch = "\uf327";
     }
 }

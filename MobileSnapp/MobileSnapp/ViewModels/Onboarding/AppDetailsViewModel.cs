@@ -8,7 +8,7 @@
 // Software.
 
 using System.Windows.Input;
-using MvvmHelpers;
+using MobileSnapp.ViewModels.Common;
 using Xamarin.Forms;
 
 namespace MobileSnapp.ViewModels.Onboarding

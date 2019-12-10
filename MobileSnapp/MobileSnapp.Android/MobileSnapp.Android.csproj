@@ -65,12 +65,16 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.3.0.991211</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="ControlRenderers\ShadowBoxViewRenderer.cs" />
+    <Compile Include="PlatformServices\PlatformService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -115,6 +119,7 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Resources\drawable\" />
     <Folder Include="ControlRenderers\" />
+    <Folder Include="PlatformServices\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MobileSnapp\MobileSnapp.csproj">

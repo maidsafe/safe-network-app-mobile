@@ -38,5 +38,9 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>SAFE Network App</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>safe</string>
+	</array>
 </dict>
 </plist>
