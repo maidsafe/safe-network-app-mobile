@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Android.Content;
 using MobileSnapp.Droid.PlatformServices;
 using MobileSnapp.Services;
@@ -11,23 +12,44 @@ namespace MobileSnapp.Droid.PlatformServices
 {
     public class PlatformService : IPlatformService
     {
+        private string _browserPackageId = "hello.maidsafe.browser";
+
         public bool CanOpenAnAppUsingUrl(string appUrl)
         {
-            var aUri = Android.Net.Uri.Parse(appUrl);
-            var intent = new Intent(Intent.ActionView, aUri);
-
-            var packageManager = CrossCurrentActivity.Current.AppContext.PackageManager;
-
-            if (packageManager != null)
+            try
             {
-                var activities = packageManager.QueryIntentActivities(
-                       intent,
-                       0);
-                var isIntentSafe = activities != null && activities.Any();
-                return isIntentSafe;
-            }
+                var packageManager = CrossCurrentActivity.Current.AppContext.PackageManager;
+                var isBrowserUrl = appUrl.StartsWith("safe://", StringComparison.Ordinal);
+                if (isBrowserUrl && packageManager != null)
+                {
+                    var packageInfo = packageManager.GetPackageInfo(
+                        _browserPackageId,
+                        Android.Content.PM.PackageInfoFlags.Activities);
+                    if (packageInfo != null)
+                    {
+                        return true;
+                    }
+                }
 
-            return false;
+                var aUri = Android.Net.Uri.Parse(appUrl);
+                var intent = new Intent(Intent.ActionView, aUri);
+
+                if (packageManager != null)
+                {
+                    var activities = packageManager.QueryIntentActivities(
+                           intent,
+                           0);
+                    var isIntentSafe = activities != null && activities.Any();
+                    return isIntentSafe;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return false;
+            }
         }
     }
 }
