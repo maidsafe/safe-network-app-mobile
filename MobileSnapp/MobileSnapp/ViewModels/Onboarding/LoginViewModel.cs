@@ -29,7 +29,10 @@ namespace MobileSnapp.ViewModels.Onboarding
             CreateAccountCommand = new Command(() =>
             {
                 _navigation.PopModalAsync();
-                _navigation.PushModalAsync(new NavigationPage(new CreateAccountOnboardingPage()));
+                _navigation.PushModalAsync(new NavigationPage(new CreateAccountOnboardingPage())
+                {
+                    BarBackgroundColor = Color.White
+                });
             });
 
             BackCommand = new Command(() => _navigation.PopModalAsync());

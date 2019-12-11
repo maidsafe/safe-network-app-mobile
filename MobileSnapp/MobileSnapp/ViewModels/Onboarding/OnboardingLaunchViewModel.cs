@@ -59,7 +59,10 @@ namespace MobileSnapp.ViewModels.Onboarding
 
         private void ShowLoginPage()
         {
-            _navigation.PushModalAsync(new NavigationPage(new LoginPage()));
+            _navigation.PushModalAsync(new NavigationPage(new LoginPage())
+            {
+                BarBackgroundColor = Color.White
+            });
         }
 
         private void PerformCarouselViewItemTapAction(object secondaryTitle)
@@ -85,7 +88,12 @@ namespace MobileSnapp.ViewModels.Onboarding
                 }
 
                 if (newActivePage != null)
-                    _navigation.PushModalAsync(new NavigationPage(newActivePage));
+                {
+                    _navigation.PushModalAsync(new NavigationPage(newActivePage)
+                    {
+                        BarBackgroundColor = Color.White
+                    });
+                }
             }
         }
 
