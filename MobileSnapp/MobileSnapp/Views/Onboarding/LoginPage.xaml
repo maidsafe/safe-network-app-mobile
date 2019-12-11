@@ -26,13 +26,23 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout Spacing="25"
-                     Padding="8">
-            <Entry Placeholder="Password" />
-            <Entry Placeholder="Passphrase" />
+        <StackLayout Spacing="30"
+                     Padding="20">
+            <Entry Placeholder="Password"
+                   Style="{StaticResource EntryStyle}" />
+            <Entry Placeholder="Passphrase"
+                   Style="{StaticResource EntryStyle}" />
             <Button Text="LOG IN"
-                    CornerRadius="20"
-                    HeightRequest="40" />
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    ContentLayout="Left, 10">
+                <Button.ImageSource>
+                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Color="{StaticResource IconOnPrimaryColor}"
+                                     Glyph="{Static icons:IconFont.Lock}"
+                                     Size="20">
+                        </FontImageSource>
+                    </Button.ImageSource>
+            </Button>
 
             <StackLayout Orientation="Horizontal">
                 <Label Text="Keep me logged in"
@@ -42,9 +52,8 @@
 
             <Label HorizontalOptions="Center"
                    VerticalOptions="EndAndExpand"
-                   TextColor="DarkBlue"
                    Text="CREATE AN ACCOUNT"
-                   Margin="0, 0, 0, 10">
+                   Style="{StaticResource PrimaryLabelButtonStyle}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CreateAccountCommand}" />
                 </Label.GestureRecognizers>
