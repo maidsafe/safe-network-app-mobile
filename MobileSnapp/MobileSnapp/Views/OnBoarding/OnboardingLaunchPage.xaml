@@ -8,7 +8,6 @@
              xmlns:vm="clr-namespace:MobileSnapp.ViewModels.Onboarding"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
-             ios:Page.UseSafeArea="True"
              mc:Ignorable="d"
              Visual="Material"
              x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage"

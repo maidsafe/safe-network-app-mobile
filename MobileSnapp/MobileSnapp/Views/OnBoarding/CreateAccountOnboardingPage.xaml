@@ -41,6 +41,7 @@
                           VerticalOptions="CenterAndExpand"
                           Position="{Binding CarouselViewCurrentPosition}"
                           VerticalScrollBarVisibility="Never"
+                          BackgroundColor="White"
                           HorizontalScrollBarVisibility="Never"
                           x:Name="CreateAccountCarouselView">
                 <CarouselView.ItemTemplate>
