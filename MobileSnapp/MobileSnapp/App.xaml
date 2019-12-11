@@ -68,6 +68,8 @@
         <Color x:Key="InputBackgroundColor">#E8E8E8</Color>
         <Color x:Key="ErrorColor">#FF0C3E</Color>
         <Color x:Key="IconOnPrimaryColor">#FFFFFF</Color>
+        <Color x:Key="StandardBlueColor">#0094FF</Color>
+        <Color x:Key="UnfocusedEntryPlaceHolderColor">#52191919</Color>
 
         <!--#endregion-->
 
@@ -96,6 +98,40 @@
                TargetType="Button">
             <Setter Property="BackgroundColor"
                     Value="{StaticResource SecondaryColor-500}" />
+        </Style>
+
+        <Style x:Key="PrimaryLabelButtonStyle"
+               TargetType="Label">
+            <Setter Property="FontAttributes"
+                    Value="Bold" />
+            <Setter Property="TextColor"
+                    Value="{StaticResource PrimaryColor-500}" />
+            <Setter Property="CharacterSpacing"
+                    Value="1.5" />
+        </Style>
+
+        <Style x:Key="EntryStyle"
+               TargetType="Entry">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="PlaceholderColor"
+                                        Value="{StaticResource UnfocusedEntryPlaceHolderColor}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Focused">
+                            <VisualState.Setters>
+                                <Setter Property="PlaceholderColor"
+                                            Value="{StaticResource StandardBlueColor}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
         </Style>
         <!--#endregion-->
 
