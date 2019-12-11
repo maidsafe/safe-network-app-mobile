@@ -61,7 +61,7 @@
             </CollectionView>
             <Label HorizontalOptions="Center"
                    VerticalOptions="EndAndExpand"
-                   TextColor="DarkBlue"
+                   Style="{StaticResource PrimaryLabelButtonStyle}"
                    Text="I ALREADY HAVE AN INVITE">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding RedeemInviteCommand}" />
