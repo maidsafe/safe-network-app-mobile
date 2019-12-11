@@ -35,7 +35,10 @@ namespace MobileSnapp.ViewModels.Onboarding
             RedeemInviteCommand = new Command(() =>
             {
                 _navigation.PopModalAsync();
-                _navigation.PushModalAsync(new NavigationPage(new CreateAccountPage()));
+                _navigation.PushModalAsync(new NavigationPage(new CreateAccountPage())
+                {
+                    BarBackgroundColor = Color.White
+                });
             });
         }
 

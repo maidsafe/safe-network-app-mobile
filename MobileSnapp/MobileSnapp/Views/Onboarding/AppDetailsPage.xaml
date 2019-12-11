@@ -50,7 +50,7 @@
                         <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}"
                                          Glyph="{x:Static icons:IconFont.ArrowLeft}"
                                          Size="30"
-                                         Color="DarkSlateGray" />
+                                         Color="{StaticResource Black-Medium}" />
                     </Image.Source>
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding BackCommand}" />

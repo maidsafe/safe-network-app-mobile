@@ -18,7 +18,12 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new OnboardingLaunchPage()) { BarBackgroundColor = Color.DarkBlue };
+            var launchPageTitleBarColor = Color.FromHex(
+                Application.Current.Resources["PrimaryColor-800"].ToString());
+            MainPage = new NavigationPage(new OnboardingLaunchPage())
+            {
+                BarBackgroundColor = launchPageTitleBarColor
+            };
         }
 
         protected override void OnStart()

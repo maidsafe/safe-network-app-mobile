@@ -12,7 +12,8 @@
              NavigationPage.HasBackButton="True"
              Visual="Material"
              Padding="15, 30"
-             Title="Log In">
+             Title="Log In"
+             BackgroundColor="White">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Back"
@@ -20,7 +21,8 @@
                      Order="Primary">
             <ToolbarItem.IconImageSource>
                 <FontImageSource Glyph="{x:Static icons:IconFont.Close}"
-                                 FontFamily="{StaticResource MaterialFontFamily}"/>
+                                 FontFamily="{StaticResource MaterialFontFamily}"
+                                 Color="{StaticResource Black-Medium}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
