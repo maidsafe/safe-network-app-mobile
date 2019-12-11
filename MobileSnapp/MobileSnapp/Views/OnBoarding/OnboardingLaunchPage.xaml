@@ -11,7 +11,8 @@
              ios:Page.UseSafeArea="True"
              mc:Ignorable="d"
              Visual="Material"
-             x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage">
+             x:Class="MobileSnapp.Views.Onboarding.OnboardingLaunchPage"
+             BackgroundColor="{StaticResource PrimaryColor-700}">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -149,45 +150,30 @@
                          VerticalOptions="EndAndExpand"
                          HorizontalOptions="FillAndExpand"
                          BackgroundColor="White"
-                         Spacing="10">
-                <StackLayout.Padding>
-                    <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="Android"
-                            Value="10" />
-                        <On Platform="iOS"
-                            Value="15" />
-                    </OnPlatform>
-                </StackLayout.Padding>
-                <StackLayout.HeightRequest>
-                    <OnPlatform x:TypeArguments="x:Double">
-                        <On Platform="Android">100</On>
-                        <On Platform="iOS">80</On>
-                    </OnPlatform>
-                </StackLayout.HeightRequest>
+                         Spacing="10"
+                         Padding="20, 20, 20, 40">
+                <Button HorizontalOptions="End"
+                        VerticalOptions="EndAndExpand"
+                        WidthRequest="120"
+                        ContentLayout="Left, 5"
+                        Margin="0, -40, 0, 0"
+                        Text="LOG IN"
+                        Command="{Binding OpenLoginPageCommand}"
+                        Style="{StaticResource SecondaryButtonStyle}">
+                    <Button.ImageSource>
+                        <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                         Color="{StaticResource IconOnPrimaryColor}"
+                                         Glyph="{Static icons:IconFont.Lock}"
+                                         Size="20">
+                        </FontImageSource>
+                    </Button.ImageSource>
+                </Button>
                 <Label Text="YOUR SAFE ACCOUNT"
                        CharacterSpacing="1.5"
-                       Style="{StaticResource SecondaryDarkLabelStyle}" />
+                       TextColor="{StaticResource Black-Medium}" />
                 <Label Text="Securely access your SAFE Network Account"
-                       Style="{StaticResource PrimaryDarkLabelStyle}"
+                       TextColor="{StaticResource Black-High}"
                        CharacterSpacing="0.25" />
-                <Button VerticalOptions="End"
-                        HorizontalOptions="End"
-                        WidthRequest="120"
-                        CornerRadius="25"
-                        ImageSource="lock"
-                        ContentLayout="Left,2"
-                        Text="LOG IN"
-                        BackgroundColor="{StaticResource SecondaryColor}"
-                        Padding="0"
-                        Command="{Binding OpenLoginPageCommand}"
-                        TextColor="White">
-                    <Button.HeightRequest>
-                        <OnPlatform x:TypeArguments="x:Double">
-                            <On Platform="Android">35</On>
-                            <On Platform="iOS">50</On>
-                        </OnPlatform>
-                    </Button.HeightRequest>
-                </Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
