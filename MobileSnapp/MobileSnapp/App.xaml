@@ -7,6 +7,7 @@
              x:Class="MobileSnapp.App">
     <Application.Resources>
 
+        <!--Material FontIcon File-->
         <OnPlatform x:Key="MaterialFontFamily"
                     x:TypeArguments="x:String">
             <On Platform="iOS"
@@ -14,6 +15,61 @@
             <On Platform="Android"
                 Value="materialdesignicons-webfont.ttf#Material Design Icons" />
         </OnPlatform>
+
+        <!--#region Theme Colors-->
+
+        <!--Primary Colors-->
+        <Color x:Key="PrimaryColor-900">#1A237E</Color>
+        <Color x:Key="PrimaryColor-800">#283593</Color>
+        <Color x:Key="PrimaryColor-700">#303F9F</Color>
+        <Color x:Key="PrimaryColor-600">#3949AB</Color>
+        <Color x:Key="PrimaryColor-500">#4054B2</Color>
+        <Color x:Key="PrimaryColor-400">#5C6BC0</Color>
+        <Color x:Key="PrimaryColor-300">#7986CB</Color>
+        <Color x:Key="PrimaryColor-200">#9FA8DA</Color>
+        <Color x:Key="PrimaryColor-100">#C5CAE9</Color>
+        <Color x:Key="PrimaryColor-50">#E8EAF6</Color>
+
+        <!--Secondary Colors-->
+        <Color x:Key="SecondaryColor-900">#BF360C</Color>
+        <Color x:Key="SecondaryColor-800">#D84315</Color>
+        <Color x:Key="SecondaryColor-700">#E64A19</Color>
+        <Color x:Key="SecondaryColor-600">#F4511E</Color>
+        <Color x:Key="SecondaryColor-500">#FF5722</Color>
+        <Color x:Key="SecondaryColor-400">#FF7043</Color>
+        <Color x:Key="SecondaryColor-300">#FF8A65</Color>
+        <Color x:Key="SecondaryColor-200">#FFAB91</Color>
+        <Color x:Key="SecondaryColor-100">#FFCCBC</Color>
+        <Color x:Key="SecondaryColor-50">#FBE9E7</Color>
+
+        <!--#endregion-->
+
+        <!--#region Global Colors-->
+
+        <!--Black Shades-->
+        <Color x:Key="Black-High">#DE000000</Color>
+        <Color x:Key="Black-Medium">#99000000</Color>
+        <Color x:Key="Black-Disabled">#61000000</Color>
+        <Color x:Key="Black-Inactive">#8A000000</Color>
+        <Color x:Key="Black-Hover">#14000000</Color>
+        <Color x:Key="Black-Focus">#1F000000</Color>
+        <Color x:Key="Black-Pressed">#29000000</Color>
+
+        <!--While Shades-->
+        <Color x:Key="White-High">#FFFFFF</Color>
+        <Color x:Key="White-Medium">#B2FFFFFF</Color>
+        <Color x:Key="White-Disabled">#80FFFFFF</Color>
+        <Color x:Key="White-Inactive">8AFFFFFF</Color>
+        <Color x:Key="White-Hover">#14FFFFFF</Color>
+        <Color x:Key="White-Focus">#1FFFFFFF</Color>
+        <Color x:Key="White-Pressed">#52FFFFFF</Color>
+
+        <!--Misc-->
+        <Color x:Key="InputBackgroundColor">#E8E8E8</Color>
+        <Color x:Key="ErrorColor">#FF0C3E</Color>
+        <Color x:Key="IconOnPrimaryColor">#FFFFFF</Color>
+
+        <!--#endregion-->
 
         <Color x:Key="PrimaryColor">#303F9F</Color>
         <Color x:Key="SecondaryColor">#FF5722</Color>
