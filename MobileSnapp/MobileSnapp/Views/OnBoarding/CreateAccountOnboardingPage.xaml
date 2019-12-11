@@ -41,7 +41,7 @@
                           Position="{Binding CarouselViewCurrentPosition}"
                           VerticalScrollBarVisibility="Never"
                           HorizontalScrollBarVisibility="Never"
-                          x:Name="LaunchPageCarouselView">
+                          x:Name="CreateAccountCarouselView">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Vertical"
@@ -107,11 +107,18 @@
                 <Label Text="BACK"
                        TextColor="{StaticResource PrimaryColor}"
                        VerticalOptions="Center"
-                       HorizontalOptions="StartAndExpand">
+                       HorizontalOptions="Start">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding BackCommand}" />
                     </Label.GestureRecognizers>
                 </Label>
+                <IndicatorView HorizontalOptions="CenterAndExpand"
+                               IndicatorColor="{StaticResource PrimaryColor-100}"
+                               SelectedIndicatorColor="{StaticResource PrimaryColor-500}"
+                               IndicatorSize="10"
+                               IndicatorView.ItemsSourceBy="CreateAccountCarouselView">
+
+                </IndicatorView>
                 <Label Text="NEXT"
                        TextColor="{StaticResource PrimaryColor}"
                        VerticalOptions="Center"
@@ -121,7 +128,7 @@
                     </Label.GestureRecognizers>
                     <Label.Triggers>
                         <DataTrigger TargetType="Label"
-                                     Binding="{Binding Source={x:Reference LaunchPageCarouselView}, Path=Position}"
+                                     Binding="{Binding Source={x:Reference CreateAccountCarouselView}, Path=Position}"
                                      Value="2">
                             <Setter Property="Text" Value="Get Started" />
                             <Setter Property="TextColor" Value="DarkOrange" />
