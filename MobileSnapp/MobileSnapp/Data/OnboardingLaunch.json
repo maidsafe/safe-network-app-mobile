@@ -5,7 +5,7 @@
       "content": "Read, explore, download. No account required.",
       "isVisible": true,
       "primaryTitle": "Get the Browser",
-      "secondaryTitle": "Explore",
+      "secondaryTitle": "EXPLORE",
       "color": "#60F5FF",
       "image": "browser"
     },
@@ -13,7 +13,7 @@
       "content": "Store files, create a site, use Safecoin and more, with a Safe Account.",
       "isVisible": true,
       "primaryTitle": "Create an Account",
-      "secondaryTitle": "Get Involved",
+      "secondaryTitle": "GET INVOLVED",
       "color": "#0022A8",
       "image":  "getInvolved"
     },
@@ -21,7 +21,7 @@
       "content": "How it share some spare hard drive space with the Network and be rewarded.",
       "isVisible": true,
       "primaryTitle": "Learn About Vaults",
-      "secondaryTitle": "Earn Safecoin",
+      "secondaryTitle": "EARN SAFECOIN",
       "color": "#FAFF00",
       "image": "vault"
     }
