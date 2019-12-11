@@ -18,8 +18,7 @@
         {
             InitializeComponent();
 
-            var launchPageTitleBarColor = Color.FromHex(
-                Application.Current.Resources["PrimaryColor-800"].ToString());
+            var launchPageTitleBarColor = (Color)Application.Current.Resources["PrimaryColor-800"];
             MainPage = new NavigationPage(new OnboardingLaunchPage())
             {
                 BarBackgroundColor = launchPageTitleBarColor
