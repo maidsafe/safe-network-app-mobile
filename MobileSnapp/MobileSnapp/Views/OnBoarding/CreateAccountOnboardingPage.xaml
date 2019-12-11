@@ -79,13 +79,13 @@
                                 <Label  Text="{Binding Title}"
                                         FontSize="Subtitle"
                                         FontAttributes="Bold"
-                                        Style="{StaticResource PrimaryDarkLabelStyle}"
+                                        TextColor="{StaticResource Black-High}"
                                         CharacterSpacing="0.15"
                                         HorizontalOptions="CenterAndExpand" />
                                 <Label  Text="{Binding Content}"
                                         MaxLines="4"
                                         CharacterSpacing="0.25"
-                                        Style="{StaticResource SecondaryDarkLabelStyle}"
+                                        TextColor="{StaticResource Black-Medium}"
                                         HorizontalOptions="CenterAndExpand" />
                             </StackLayout>
                         </StackLayout>

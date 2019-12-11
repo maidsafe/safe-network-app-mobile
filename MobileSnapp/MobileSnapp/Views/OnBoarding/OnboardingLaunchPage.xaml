@@ -28,11 +28,11 @@
     <ContentPage.Content>
         <StackLayout Spacing="0"
                      Orientation="Vertical"
-                     BackgroundColor="{StaticResource PrimaryColor}">
+                     BackgroundColor="{StaticResource PrimaryColor-700}">
 
             <!--Browser launch header-->
             <Label Text="BROWSE SAFE"
-                   Style="{StaticResource PrimaryLightLabelStyle}"
+                   TextColor="{StaticResource White-Medium}"
                    VerticalOptions="EndAndExpand"
                    Margin="20, 0"
                    IsVisible="{Binding IsBrowserInstalled}" />
@@ -60,7 +60,7 @@
 
             <!--App launch options-->
             <Label Text="GETTING STARTED"
-                   Style="{StaticResource PrimaryLightLabelStyle}"
+                   TextColor="{StaticResource White-Medium}"
                    VerticalOptions="EndAndExpand"
                    Margin="20, 0" />
             <CarouselView ItemsSource="{Binding OnBoardingLaunchItems}"

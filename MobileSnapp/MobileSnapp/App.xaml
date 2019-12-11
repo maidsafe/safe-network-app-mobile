@@ -134,34 +134,5 @@
             </Setter>
         </Style>
         <!--#endregion-->
-
-        <Color x:Key="PrimaryColor">#303F9F</Color>
-        <Color x:Key="SecondaryColor">#FF5722</Color>
-        <Color x:Key="PrimaryDarkTextColor">#000000</Color>
-        <Color x:Key="PrimaryLightTextColor">#FFFFFF</Color>
-
-        <Style TargetType="Label"
-               x:Key="PrimaryDarkLabelStyle">
-            <Setter Property="TextColor"
-                    Value="{StaticResource PrimaryDarkTextColor}" />
-            <Setter Property="Opacity"
-                    Value="0.87" />
-        </Style>
-
-        <Style TargetType="Label"
-               x:Key="SecondaryDarkLabelStyle">
-            <Setter Property="TextColor"
-                    Value="{StaticResource PrimaryDarkTextColor}" />
-            <Setter Property="Opacity"
-                    Value="0.6" />
-        </Style>
-
-        <Style TargetType="Label"
-               x:Key="PrimaryLightLabelStyle">
-            <Setter Property="TextColor"
-                    Value="{StaticResource PrimaryLightTextColor}" />
-            <Setter Property="Opacity"
-                    Value="0.7" />
-        </Style>
     </Application.Resources>
 </Application>
