@@ -59,7 +59,7 @@
         <Color x:Key="White-High">#FFFFFF</Color>
         <Color x:Key="White-Medium">#B2FFFFFF</Color>
         <Color x:Key="White-Disabled">#80FFFFFF</Color>
-        <Color x:Key="White-Inactive">8AFFFFFF</Color>
+        <Color x:Key="White-Inactive">#8AFFFFFF</Color>
         <Color x:Key="White-Hover">#14FFFFFF</Color>
         <Color x:Key="White-Focus">#1FFFFFFF</Color>
         <Color x:Key="White-Pressed">#52FFFFFF</Color>
@@ -69,6 +69,34 @@
         <Color x:Key="ErrorColor">#FF0C3E</Color>
         <Color x:Key="IconOnPrimaryColor">#FFFFFF</Color>
 
+        <!--#endregion-->
+
+
+        <!--#region Control Styles-->
+
+        <Style x:Key="BaseButtonStyle"
+               TargetType="Button">
+            <Setter Property="TextColor"
+                    Value="{StaticResource White-High}" />
+            <Setter Property="CornerRadius"
+                    Value="20" />
+            <Setter Property="HeightRequest"
+                    Value="40" />
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle"
+               BasedOn="{StaticResource BaseButtonStyle}"
+               TargetType="Button">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource PrimaryColor-500}" />
+        </Style>
+
+        <Style x:Key="SecondaryButtonStyle"
+               BasedOn="{StaticResource BaseButtonStyle}"
+               TargetType="Button">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource SecondaryColor-500}" />
+        </Style>
         <!--#endregion-->
 
         <Color x:Key="PrimaryColor">#303F9F</Color>
