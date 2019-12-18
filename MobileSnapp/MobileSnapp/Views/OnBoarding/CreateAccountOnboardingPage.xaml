@@ -97,7 +97,7 @@
             <StackLayout VerticalOptions="End"
                          HorizontalOptions="FillAndExpand"
                          Orientation="Horizontal"
-                         BackgroundColor="#FAFAFA">
+                         BackgroundColor="{StaticResource SurfaceSheetColor}">
                 <StackLayout.Padding>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="Android"
@@ -106,23 +106,33 @@
                             Value="25,20" />
                     </OnPlatform>
                 </StackLayout.Padding>
+
                 <Label Text="BACK"
-                       TextColor="{StaticResource PrimaryColor}"
+                       TextColor="{StaticResource PrimaryColor-500}"
                        VerticalOptions="Center"
                        HorizontalOptions="Start">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding BackCommand}" />
                     </Label.GestureRecognizers>
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label"
+                                     Binding="{Binding Source={x:Reference CreateAccountCarouselView}, Path=Position}"
+                                     Value="0">
+                            <Setter Property="TextColor" Value="{StaticResource Black-Disabled}" />
+                        </DataTrigger>
+                    </Label.Triggers>
                 </Label>
+
                 <IndicatorView HorizontalOptions="CenterAndExpand"
                                IndicatorColor="{StaticResource PrimaryColor-100}"
                                SelectedIndicatorColor="{StaticResource PrimaryColor-500}"
                                IndicatorSize="10"
-                               IndicatorView.ItemsSourceBy="CreateAccountCarouselView">
+                               IndicatorView.ItemsSourceBy="CreateAccountCarouselView"
+                               VerticalOptions="Center">
 
                 </IndicatorView>
                 <Label Text="NEXT"
-                       TextColor="{StaticResource PrimaryColor}"
+                       TextColor="{StaticResource PrimaryColor-500}"
                        VerticalOptions="Center"
                        HorizontalOptions="End">
                     <Label.GestureRecognizers>
@@ -133,7 +143,7 @@
                                      Binding="{Binding Source={x:Reference CreateAccountCarouselView}, Path=Position}"
                                      Value="2">
                             <Setter Property="Text" Value="Get Started" />
-                            <Setter Property="TextColor" Value="DarkOrange" />
+                            <Setter Property="TextColor" Value="{StaticResource SecondaryColor-500}" />
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
