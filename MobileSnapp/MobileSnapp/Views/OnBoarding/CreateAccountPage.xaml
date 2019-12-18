@@ -31,6 +31,8 @@
                     Value="{StaticResource Black-High}" />
             <Setter Property="FontSize"
                     Value="Large" />
+            <Setter Property="FontAttributes"
+                    Value="Bold" />
             <Setter Property="Margin"
                     Value="0, 20, 0, 0" />
         </Style>

@@ -71,6 +71,8 @@
         <Color x:Key="StandardBlueColor">#0094FF</Color>
         <Color x:Key="UnfocusedEntryPlaceHolderColor">#52191919</Color>
         <Color x:Key="SurfaceSheetColor">#FAFAFA</Color>
+        <Color x:Key="SurfaceSheetGrayColor">#E0E0E0</Color>
+        <Color x:Key="TextEditorGreenColor">#6EDD00</Color>
 
         <!--#endregion-->
 
