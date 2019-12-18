@@ -7,29 +7,29 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-using MobileSnapp.ViewModels.Onboarding;
+using System;
 using Xamarin.Forms;
 
-namespace MobileSnapp.Views.Onboarding
+namespace MobileSnapp.Converters
 {
-    public partial class AppDetailsPage : ContentPage
+    public class InverseBooleanConverter : IValueConverter
     {
-        private AppDetailsViewModel _viewModel;
-
-        public AppDetailsPage()
+        public object Convert(
+            object value,
+            Type targetType,
+            object parameter,
+            System.Globalization.CultureInfo culture)
         {
-            InitializeComponent();
+            return !((bool)value);
         }
 
-        protected override void OnAppearing()
+        public object ConvertBack(
+            object value,
+            Type targetType,
+            object parameter,
+            System.Globalization.CultureInfo culture)
         {
-            base.OnAppearing();
-
-            if (_viewModel == null)
-            {
-                _viewModel = new AppDetailsViewModel(Navigation);
-                BindingContext = _viewModel;
-            }
+            return value;
         }
     }
 }

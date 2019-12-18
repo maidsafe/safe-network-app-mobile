@@ -7,29 +7,22 @@
 // specific language governing permissions and limitations relating to use of the SAFE Network
 // Software.
 
-using MobileSnapp.ViewModels.Onboarding;
-using Xamarin.Forms;
+using Xamarin.Essentials;
 
-namespace MobileSnapp.Views.Onboarding
+namespace MobileSnapp.Helpers
 {
-    public partial class AppDetailsPage : ContentPage
+    public class AppPreferencesHelper
     {
-        private AppDetailsViewModel _viewModel;
+        private const string IsBrowserInstalledKey = "IsBrowserInstalled";
 
-        public AppDetailsPage()
+        public static bool IsBrowserInstalled
         {
-            InitializeComponent();
+            get => Preferences.Get(IsBrowserInstalledKey, false);
+            set => Preferences.Set(IsBrowserInstalledKey, value);
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
+        public static void ClearIsBrowserInstallPreference() => Preferences.Remove(IsBrowserInstalledKey);
 
-            if (_viewModel == null)
-            {
-                _viewModel = new AppDetailsViewModel(Navigation);
-                BindingContext = _viewModel;
-            }
-        }
+        public static void ClearAllAppPreferences() => Preferences.Clear();
     }
 }

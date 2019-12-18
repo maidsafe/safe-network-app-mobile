@@ -57,5 +57,6 @@
     <Folder Include="ViewModels\Common\" />
     <Folder Include="Services\" />
     <Folder Include="Services\Abstractions\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>
