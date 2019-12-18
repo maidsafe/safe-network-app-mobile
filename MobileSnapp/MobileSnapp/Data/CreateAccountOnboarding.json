@@ -12,7 +12,7 @@
     },
     {
       "title": "Earn Safecoin with a Vault.",
-      "content": "You can pay for your account by running a Vault on your home computer. Contribute computer power to the network and be rewarded for it.",
+      "content": "You can pay for your account by running a Vault on your home computer.\n\nContribute computer power to the network and be rewarded for it.",
       "image": "vault_large"
     }
   ],
@@ -25,13 +25,13 @@
     },
     {
       "title": "Request an Invite",
-      "content": "Ask the community for an invite to get started fast",
+      "content": "Ask the community for an invite to get started fast.",
       "image": "",
       "isDesktopOnly": false
     },
     {
       "title": "Earn one Yourself",
-      "content": "Use your computer to earn Safecoins and create an account",
+      "content": "Use your computer to generate an Account Invite and earn Safecoins.",
       "image": "vault_large",
       "isDesktopOnly": true
     }

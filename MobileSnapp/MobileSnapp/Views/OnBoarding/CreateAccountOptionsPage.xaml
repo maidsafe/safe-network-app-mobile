@@ -17,48 +17,68 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame CornerRadius="5"
-                               Padding="15"
-                               HeightRequest="80"
+                        <Frame CornerRadius="4"
+                               Padding="20"
                                BorderColor="LightGray"
-                               BackgroundColor="#FAFAFA"
+                               BackgroundColor="{StaticResource SurfaceSheetColor}"
                                HasShadow="False">
                             <Frame.Triggers>
                                 <DataTrigger TargetType="Frame"
                                              Binding="{Binding IsDesktopOnly}"
                                              Value="True">
                                     <Setter Property="BackgroundColor"
-                                            Value="LightGray" />
+                                            Value="{StaticResource SurfaceSheetGrayColor}" />
                                 </DataTrigger>
                             </Frame.Triggers>
-                            <StackLayout>
+                            <Grid ColumnSpacing="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="3*" />
+                                </Grid.ColumnDefinitions>
+
                                 <Label Text="DESKTOP ONLY"
                                        FontSize="Micro"
-                                       IsVisible="{Binding IsDesktopOnly}" />
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1*" />
-                                        <ColumnDefinition Width="3*" />
-                                    </Grid.ColumnDefinitions>
-                                    <Image Grid.Column="0"
-                                           Source="{Binding Image}"
-                                           Aspect="AspectFill"
-                                           HeightRequest="60"
-                                           WidthRequest="60" />
-                                    <StackLayout Grid.Column="1"
-                                                 VerticalOptions="Center">
-                                        <Label Text="{Binding Title}"
-                                               FontAttributes="Bold"
-                                               FontSize="Medium" />
-                                        <Label Text="{Binding Content}"
-                                               FontSize="Micro" />
-                                    </StackLayout>
-                                </Grid>
-                            </StackLayout>
+                                       IsVisible="{Binding IsDesktopOnly}"
+                                       TextColor="{StaticResource Black-Medium}"
+                                       Grid.ColumnSpan="2"
+                                       VerticalOptions="Start" />
+                                
+                                <Image Grid.Row="1"
+                                       Source="{Binding Image}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="60"
+                                       WidthRequest="60"
+                                       VerticalOptions="CenterAndExpand" />
+
+                                <StackLayout Grid.Column="1"
+                                             Grid.RowSpan="2"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding Title}"
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            TextColor="{StaticResource Black-High}" />
+                                    <Label Text="{Binding Content}"
+                                            FontSize="Small"
+                                            TextColor="{StaticResource Black-Medium}"/>
+                                    <StackLayout.Triggers>
+                                        <DataTrigger TargetType="StackLayout"
+                                                     Binding="{Binding IsDesktopOnly}"
+                                                     Value="True">
+                                            <Setter Property="Margin"
+                                                    Value="0, 20, 0, 0" />
+                                        </DataTrigger>
+                                    </StackLayout.Triggers>
+                                </StackLayout>
+                            </Grid>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
             <Label HorizontalOptions="Center"
                    VerticalOptions="EndAndExpand"
                    Style="{StaticResource PrimaryLabelButtonStyle}"

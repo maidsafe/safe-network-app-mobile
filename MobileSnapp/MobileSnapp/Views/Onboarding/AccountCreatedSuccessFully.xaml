@@ -19,7 +19,7 @@
                         FontFamily="{DynamicResource MaterialFontFamily}"
                         Glyph="{x:Static icons:IconFont.CheckCircleOutline}"
                         Size="150"
-                        Color="Green" />
+                        Color="{StaticResource TextEditorGreenColor}" />
                 </Image.Source>
             </Image>
             <Label Text="Account Created"
