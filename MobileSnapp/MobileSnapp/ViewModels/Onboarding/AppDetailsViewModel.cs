@@ -8,6 +8,7 @@
 // Software.
 
 using System.Windows.Input;
+using MobileSnapp.Helpers;
 using MobileSnapp.ViewModels.Common;
 using Xamarin.Forms;
 
@@ -18,6 +19,8 @@ namespace MobileSnapp.ViewModels.Onboarding
         private INavigation _navigation;
 
         public ICommand BackCommand { get; }
+
+        public bool IsBrowserInstalled => AppPreferencesHelper.IsBrowserInstalled;
 
         public AppDetailsViewModel(INavigation navigation)
         {

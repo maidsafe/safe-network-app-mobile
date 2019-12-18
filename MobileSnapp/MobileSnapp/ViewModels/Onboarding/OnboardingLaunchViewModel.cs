@@ -42,19 +42,23 @@ namespace MobileSnapp.ViewModels.Onboarding
         public OnBoardingLaunchViewModel(INavigation navigation)
         {
             _navigation = navigation;
+            IsBrowserInstalled = AppPreferencesHelper.IsBrowserInstalled;
 
             OnBoardingLaunchItems = new ObservableCollection<CarouselItem>(
                ContentHelpers.PopulateData<OnboardingLaunch>(
                    _staticContentFile)
                .CarouselItems);
 
-            CarouselViewItemTapCommand = new Command((object secondaryTitle) => PerformCarouselViewItemTapAction(secondaryTitle));
-            OpenLoginPageCommand = new Command(() => ShowLoginPage());
+            CarouselViewItemTapCommand = new Command(PerformCarouselViewItemTapAction);
+            OpenLoginPageCommand = new Command(ShowLoginPage);
 
             // Check is the browser is install
             var canOpenTestUrl = PlatformService.CanOpenAnAppUsingUrl("safe://testapp.net");
             if (canOpenTestUrl)
+            {
                 IsBrowserInstalled = true;
+                AppPreferencesHelper.IsBrowserInstalled = true;
+            }
         }
 
         private void ShowLoginPage()
@@ -74,15 +78,15 @@ namespace MobileSnapp.ViewModels.Onboarding
             if (tappedItem != null)
             {
                 ContentPage newActivePage = null;
-                switch (tappedItem.SecondaryTitle)
+                switch (tappedItem.SecondaryTitle.ToLower())
                 {
-                    case "Explore":
+                    case "explore":
                         newActivePage = new AppDetailsPage();
                         break;
-                    case "Get Involved":
+                    case "get involved":
                         newActivePage = new CreateAccountOnboardingPage();
                         break;
-                    case "Earn Safecoin":
+                    case "earn safecoin":
                         newActivePage = new LoginPage();
                         break;
                 }

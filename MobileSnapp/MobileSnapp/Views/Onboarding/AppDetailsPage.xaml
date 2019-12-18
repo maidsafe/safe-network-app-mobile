@@ -7,6 +7,7 @@
              ios:Page.UseSafeArea="True"
              xmlns:icons="clr-namespace:MobileSnapp.Models"
              NavigationPage.HasNavigationBar="False">
+
     <ContentPage.Content>
             <Grid VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
@@ -75,13 +76,45 @@
                             VerticalOptions="EndAndExpand"
                             WidthRequest="150"
                             Style="{StaticResource PrimaryButtonStyle}"
-                            ContentLayout="Left, 10">
+                            ContentLayout="Left, 10"
+                            IsVisible="False">
                         <Button.ImageSource>
                             <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                                              Glyph="{Static icons:IconFont.Download}"
                                              Size="20">
                             </FontImageSource>
                         </Button.ImageSource>
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button"
+                                         Binding="{Binding IsBrowserInstalled}"
+                                         Value="False">
+                                <Setter Property="IsVisible"
+                                        Value="True" />
+                            </DataTrigger>
+                        </Button.Triggers>
+                    </Button>
+
+                    <Button Text="OPEN"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="EndAndExpand"
+                            WidthRequest="100"
+                            Style="{StaticResource PrimaryButtonStyle}"
+                            ContentLayout="Left, 10"
+                            IsVisible="False">
+                        <Button.ImageSource>
+                            <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                             Glyph="{Static icons:IconFont.Launch}"
+                                             Size="20">
+                            </FontImageSource>
+                        </Button.ImageSource>
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button"
+                                         Binding="{Binding IsBrowserInstalled}"
+                                         Value="True">
+                                <Setter Property="IsVisible"
+                                        Value="True" />
+                            </DataTrigger>
+                        </Button.Triggers>
                     </Button>
                 </StackLayout>
             </Grid>
