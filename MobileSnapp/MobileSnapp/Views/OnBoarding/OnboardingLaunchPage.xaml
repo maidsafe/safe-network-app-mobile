@@ -27,16 +27,13 @@
 
     <ContentPage.Content>
         <StackLayout Spacing="0"
-                     Orientation="Vertical"
                      BackgroundColor="{StaticResource PrimaryColor-700}">
 
             <!--Browser launch header-->
             <Label Text="BROWSE SAFE"
-                   TextColor="{StaticResource White-Medium}"
-                   VerticalOptions="EndAndExpand"
-                   Margin="20, 0"
+                   Style="{StaticResource SectionHeaderTitleStyle}"
                    IsVisible="{Binding IsBrowserInstalled}" />
-            <StackLayout BackgroundColor="DarkSlateBlue"
+            <StackLayout BackgroundColor="{StaticResource PrimaryColor-600}"
                          Orientation="Horizontal"
                          Padding="20, 10"
                          Margin="0, 10"
@@ -47,24 +44,22 @@
                        HeightRequest="40"
                        WidthRequest="40" />
                 <Label Text="SAFE Browser"
-                       FontSize="Medium"
-                       TextColor="White"
+                       FontSize="Large"
+                       TextColor="{StaticResource White-High}"
                        VerticalOptions="Center" />
                 <Label FontFamily="{StaticResource MaterialFontFamily}"
-                       TextColor="DarkGray"
+                       TextColor="{StaticResource White-Medium}"
                        HorizontalOptions="EndAndExpand"
                        VerticalOptions="Center"
-                       FontSize="Large"
+                       FontSize="Title"
                        Text="{x:Static icons:IconFont.Launch}" />
             </StackLayout>
 
             <!--App launch options-->
             <Label Text="GETTING STARTED"
-                   TextColor="{StaticResource White-Medium}"
-                   VerticalOptions="EndAndExpand"
-                   Margin="20, 0" />
+                   Style="{StaticResource SectionHeaderTitleStyle}" />
             <CarouselView ItemsSource="{Binding OnBoardingLaunchItems}"
-                          Margin="20, 0"
+                          Margin="20, 0, 0, 0"
                           HorizontalOptions="CenterAndExpand"
                           VerticalOptions="CenterAndExpand"
                           VerticalScrollBarVisibility="Never"

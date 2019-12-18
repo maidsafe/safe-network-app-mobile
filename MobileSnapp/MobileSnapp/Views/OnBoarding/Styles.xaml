@@ -2,4 +2,11 @@
 <ResourceDictionary  xmlns="http://xamarin.com/schemas/2014/forms"
                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                      x:Class="MobileSnapp.Views.Onboarding.Styles">
+
+    <Style x:Key="SectionHeaderTitleStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource White-Medium}" />
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+        <Setter Property="Margin" Value="20, 0" />
+    </Style>
+
 </ResourceDictionary>
