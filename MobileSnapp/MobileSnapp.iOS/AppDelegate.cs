@@ -26,7 +26,8 @@ namespace MobileSnapp.IOS
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.SetFlags("CarouselView_Experimental", "IndicatorView_Experimental");
+            Forms.SetFlags("CarouselView_Experimental");
+            Forms.SetFlags("IndicatorView_Experimental");
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App());
