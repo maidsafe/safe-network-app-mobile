@@ -65,7 +65,8 @@ namespace MobileSnapp.ViewModels.Onboarding
         {
             _navigation.PushModalAsync(new NavigationPage(new LoginPage())
             {
-                BarBackgroundColor = Color.White
+                BarBackgroundColor = Color.White,
+                BarTextColor = Color.Black
             });
         }
 
@@ -95,7 +96,8 @@ namespace MobileSnapp.ViewModels.Onboarding
                 {
                     _navigation.PushModalAsync(new NavigationPage(newActivePage)
                     {
-                        BarBackgroundColor = Color.White
+                        BarBackgroundColor = Color.White,
+                        BarTextColor = Color.Black
                     });
                 }
             }

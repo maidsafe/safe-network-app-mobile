@@ -70,6 +70,7 @@
         <Color x:Key="IconOnPrimaryColor">#FFFFFF</Color>
         <Color x:Key="StandardBlueColor">#0094FF</Color>
         <Color x:Key="UnfocusedEntryPlaceHolderColor">#52191919</Color>
+        <Color x:Key="SurfaceSheetColor">#FAFAFA</Color>
 
         <!--#endregion-->
 

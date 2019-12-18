@@ -31,7 +31,8 @@ namespace MobileSnapp.ViewModels.Onboarding
                 _navigation.PopModalAsync();
                 _navigation.PushModalAsync(new NavigationPage(new CreateAccountOnboardingPage())
                 {
-                    BarBackgroundColor = Color.White
+                    BarBackgroundColor = Color.White,
+                    BarTextColor = Color.Black
                 });
             });
 
