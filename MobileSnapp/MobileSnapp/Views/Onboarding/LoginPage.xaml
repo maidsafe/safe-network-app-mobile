@@ -7,6 +7,7 @@
              x:Class="MobileSnapp.Views.Onboarding.LoginPage"
              xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:NavigationPage.HideNavigationBarSeparator="true"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="True"
              NavigationPage.HasBackButton="True"
@@ -31,8 +32,10 @@
         <StackLayout Spacing="30"
                      Padding="20">
             <Entry Placeholder="Password"
+                   HeightRequest="70"
                    Style="{StaticResource EntryStyle}" />
             <Entry Placeholder="Passphrase"
+                   HeightRequest="70"
                    Style="{StaticResource EntryStyle}" />
             <Button Text="LOG IN"
                     Style="{StaticResource PrimaryButtonStyle}"

@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              xmlns:icons="clr-namespace:MobileSnapp.Models"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:NavigationPage.HideNavigationBarSeparator="true"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="False"
              xmlns:controls="clr-namespace:MobileSnapp.Controls"
