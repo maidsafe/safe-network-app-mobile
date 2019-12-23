@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using CoreAnimation;
 using CoreGraphics;
 using MobileSnapp.Controls;
-using MobileSnapp.IOS.ControlRenderers;
+using MobileSnapp.iOS.ControlRenderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(ShadowBoxView), typeof(ShadowBoxViewRenderer))]
 
-namespace MobileSnapp.IOS.ControlRenderers
+namespace MobileSnapp.iOS.ControlRenderers
 {
     public class ShadowBoxViewRenderer : VisualElementRenderer<ShadowBoxView>
     {

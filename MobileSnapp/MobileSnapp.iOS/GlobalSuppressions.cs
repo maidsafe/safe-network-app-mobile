@@ -13,3 +13,4 @@
 // a specific target and scoped to a namespace, type, member, etc.
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:Element should begin with upper-case letter", Justification = "Default namespace for iOS apps", Scope = "namespace", Target = "~N:MobileSnapp.iOS")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:Element should begin with upper-case letter", Justification = "Default namespace for iOS apps", Scope = "namespace", Target = "~N:MobileSnapp.iOS.PlatformServices")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:Element should begin with upper-case letter", Justification = "Default namespace for iOS apps", Scope = "namespace", Target = "~N:MobileSnapp.iOS.ControlRenderers")]
