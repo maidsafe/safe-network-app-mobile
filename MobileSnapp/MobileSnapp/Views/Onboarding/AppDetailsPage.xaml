@@ -37,11 +37,19 @@
                                 Margin="0, 20, 0, 0"
                                 FontSize="14" />
                     </StackLayout>
-                    <Image Source="browser"
-                           HeightRequest="80"
+                    <Frame HeightRequest="80"
                            WidthRequest="80"
-                           VerticalOptions="Center"
-                           HorizontalOptions="EndAndExpand" />
+                           BackgroundColor="{StaticResource BrowserInfoImageBackgroundColor}"
+                           Padding="10"
+                           CornerRadius="50"
+                           HasShadow="False"
+                           VerticalOptions="Center">
+                        <Image Source="browserlogo"
+                               HeightRequest="80"
+                               WidthRequest="80"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand" />
+                    </Frame>
                 </StackLayout>
                 <Image HeightRequest="30"
                        WidthRequest="30"
