@@ -137,22 +137,15 @@
   <ItemGroup>
     <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
     <BundleResource Include="Resources\safenetworklogo.png" />
-    <BundleResource Include="Resources\lock.png" />
-    <BundleResource Include="Resources\vault.png" />
-    <BundleResource Include="Resources\browser.png" />
-    <BundleResource Include="Resources\getInvolved.png" />
     <BundleResource Include="Resources\safelogowhite.png" />
+    <BundleResource Include="Resources\browserlogo.png" />
+    <BundleResource Include="Resources\someone.png" />
+    <BundleResource Include="Resources\vault.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Main.cs" />
-    <BundleResource Include="Resources\someone.png" />
-    <BundleResource Include="Resources\browser.png" />
-    <BundleResource Include="Resources\safecoin.png" />
-    <BundleResource Include="Resources\shield.png" />
-    <BundleResource Include="Resources\vault_large.png" />
-    <BundleResource Include="Resources\download.png" />
     <BundleResource Include="Resources\launch.png" />
   </ItemGroup>
   <ItemGroup>
