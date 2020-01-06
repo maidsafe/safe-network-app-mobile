@@ -73,6 +73,7 @@
         <Color x:Key="SurfaceSheetColor">#FAFAFA</Color>
         <Color x:Key="SurfaceSheetGrayColor">#E0E0E0</Color>
         <Color x:Key="TextEditorGreenColor">#6EDD00</Color>
+        <Color x:Key="BrowserInfoImageBackgroundColor">#60F5FF</Color>
 
         <!--#endregion-->
 

@@ -5,23 +5,16 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="True"
-             xmlns:icons="clr-namespace:MobileSnapp.Models"
-             BackgroundColor="LightGray"
+             BackgroundColor="DarkGray"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Image HeightRequest="150"
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     Spacing="20">
+            <Image HeightRequest="200"
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="CenterAndExpand"
-                   WidthRequest="150">
-                <Image.Source>
-                    <FontImageSource
-                        FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{x:Static icons:IconFont.CheckCircleOutline}"
-                        Size="150"
-                        Color="{StaticResource TextEditorGreenColor}" />
-                </Image.Source>
-            </Image>
+                   WidthRequest="200"
+                   Source="accheck" />
             <Label Text="Account Created"
                    TextColor="White"
                    FontSize="Large"

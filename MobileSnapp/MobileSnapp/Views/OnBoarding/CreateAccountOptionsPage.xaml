@@ -7,7 +7,8 @@
              ios:Page.PrefersHomeIndicatorAutoHidden="true"
              ios:Page.UseSafeArea="True"
              Title="Create an Account"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             Visual="Material">
 
     <ContentPage.Content>
         <StackLayout Padding="16, 25">
@@ -21,8 +22,8 @@
                         <Frame CornerRadius="4"
                                Padding="20"
                                BorderColor="LightGray"
-                               BackgroundColor="{StaticResource SurfaceSheetColor}"
-                               HasShadow="False">
+                               Visual="Material"
+                               BackgroundColor="{StaticResource SurfaceSheetColor}">
                             <Frame.Triggers>
                                 <DataTrigger TargetType="Frame"
                                              Binding="{Binding IsDesktopOnly}"
@@ -50,7 +51,6 @@
                                 
                                 <Image Grid.Row="1"
                                        Source="{Binding Image}"
-                                       Aspect="AspectFill"
                                        HeightRequest="60"
                                        WidthRequest="60"
                                        VerticalOptions="CenterAndExpand" />
