@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Rules for SAFE Mobile Browser" Description="Code analysis rules for SAFE Mobile Browser." ToolsVersion="15.0">
+<RuleSet Name="Rules for Safe Mobile Browser" Description="Code analysis rules for Safe Mobile Browser." ToolsVersion="15.0">
   <IncludeAll Action="Warning" />
   <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
     <!--

@@ -1,27 +1,29 @@
-# SAFE Network App Mobile
+# Safe Network App Mobile
 
-Cross platform mobile app for managing your SAFE Network application permissions.
+Cross platform mobile app for managing your Safe Network application permissions.
 
 ## Table of Contents
 
-1. [Overview](#Overview)
-2. [Development](#Development)
-    * [Project Structure](#Project-structure)
-    * [Tools required](#Tools-required)
-3. [Copyrights](#Copyrights)
-4. [Further Help](#Further-Help)
-5. [License](#License)
+- [Safe Network App Mobile](#safe-network-app-mobile)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Development](#development)
+    - [Project structure](#project-structure)
+    - [Tools required](#tools-required)
+  - [Further help](#further-help)
+  - [License](#license)
+  - [Contributing](#contributing)
 
 ## Overview
 
-The SAFE Network App is a cross-platform mobile (Android, iOS) app, built to help the users to create an account, login and manage app permissions on the SAFE Network.
+The Safe Network App is a cross-platform mobile (Android, iOS) app, built to help the users to create an account, login and manage app permissions on the Safe Network.
 
 ## Development
 
 ### Project structure
 
 * **MobileSnapp:**
-  * Common UI code and SAFE logic for the mobile app
+  * Common UI code and Safe logic for the mobile app
 * **MobileSnapp.Platform:**
   * Platform: Android, iOS
   * Platform specific/dependent code
@@ -36,11 +38,11 @@ The SAFE Network App is a cross-platform mobile (Android, iOS) app, built to hel
 
 ## Further help
 
-Get your developer related questions clarified on [SAFE Dev Forum](https://forum.safedev.org/). If you're looking to share any ideas or thoughts on the SAFE Network you can reach out on [SAFE Network Forum](https://safenetforum.org/)
+Get your developer related questions clarified on [Safe Dev Forum](https://forum.safedev.org/). If you're looking to share any ideas or thoughts on the Safe Network you can reach out on [Safe Network Forum](https://safenetforum.org/)
 
 ## License
 
-This SAFE Network library is dual-licensed under the Modified BSD ([LICENSE-BSD](LICENSE-BSD) https://opensource.org/licenses/BSD-3-Clause) or the MIT license ([LICENSE-MIT](LICENSE-MIT) https://opensource.org/licenses/MIT) at your option.
+This Safe Network library is dual-licensed under the Modified BSD ([LICENSE-BSD](LICENSE-BSD) https://opensource.org/licenses/BSD-3-Clause) or the MIT license ([LICENSE-MIT](LICENSE-MIT) https://opensource.org/licenses/MIT) at your option.
 
 ## Contributing
 
