@@ -109,7 +109,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\vault.png">
+    <AndroidResource Include="Resources\drawable\node.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -121,7 +121,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\cavault.png">
+    <AndroidResource Include="Resources\drawable\canode.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -137,7 +137,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\cavaultround.png">
+    <AndroidResource Include="Resources\drawable\canoderound.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

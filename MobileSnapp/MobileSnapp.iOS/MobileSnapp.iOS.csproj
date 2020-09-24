@@ -140,14 +140,14 @@
     <BundleResource Include="Resources\safelogowhite.png" />
     <BundleResource Include="Resources\browserlogo.png" />
     <BundleResource Include="Resources\someone.png" />
-    <BundleResource Include="Resources\vault.png" />
+    <BundleResource Include="Resources\node.png" />
     <BundleResource Include="Resources\casafecoin.png" />
     <BundleResource Include="Resources\cashield.png" />
-    <BundleResource Include="Resources\cavault.png" />
+    <BundleResource Include="Resources\canode.png" />
     <BundleResource Include="Resources\casheild.png" />
     <BundleResource Include="Resources\caannounce.png" />
     <BundleResource Include="Resources\cagift.png" />
-    <BundleResource Include="Resources\cavaultround.png" />
+    <BundleResource Include="Resources\canoderound.png" />
     <BundleResource Include="Resources\accheck.png" />
   </ItemGroup>
   <ItemGroup>

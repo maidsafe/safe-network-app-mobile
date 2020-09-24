@@ -20,12 +20,12 @@
     {
       "content": "How it share some spare hard drive space with the Network and be rewarded.",
       "isVisible": true,
-      "primaryTitle": "Learn About Vaults",
+      "primaryTitle": "Learn About Nodes",
       "secondaryTitle": "EARN SAFECOIN",
       "color": "#FAFF00",
-      "image": "vault"
+      "image": "node"
     }
   ],
-  "bottomLayoutSecondaryTitle": "Your SAFE Account",
-  "bottomLayoutPrimaryTitle": "Securely access your SAFE Network Account"
+  "bottomLayoutSecondaryTitle": "Your Safe Account",
+  "bottomLayoutPrimaryTitle": "Securely access your Safe Network Account"
 }
