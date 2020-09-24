@@ -11,9 +11,9 @@
       "image": "casafecoin"
     },
     {
-      "title": "Earn Safecoin with a Vault.",
-      "content": "You can pay for your account by running a Vault on your home computer.\n\nContribute computer power to the network and be rewarded for it.",
-      "image": "cavault"
+      "title": "Earn Safecoin with a Node.",
+      "content": "You can pay for your account by running a Node on your home computer.\n\nContribute computer power to the network and be rewarded for it.",
+      "image": "canode"
     }
   ],
   "createAccountOptionList": [
@@ -32,7 +32,7 @@
     {
       "title": "Earn one Yourself",
       "content": "Use your computer to generate an Account Invite and earn Safecoins.",
-      "image": "cavaultround",
+      "image": "canoderound",
       "isDesktopOnly": true
     }
   ]
